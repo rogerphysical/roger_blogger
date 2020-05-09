@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="images/radius.jpg">
+		<title>作業內容</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header2">
+				<div class="h1">
+					<div id="h11" class="h11" onclick="open_menu()">☰</div>
+					<div id="h12" class="h12">
+						<a href="index.html"><div class="h12_item">首頁</div></a>
+						<a href="##"><div class="h12_item">相關連結</div></a>
+						<a href="##"><div class="h12_item">熱門文章</div></a>
+					</div>
+				</div>
+				<div class="h2">
+					<div class="h2_item">u</div>
+					<div class="h2_item">n</div>
+					<div class="h2_item">k</div>
+					<div class="h2_item">n</div>
+					<div class="h2_item">o</div>
+					<div class="h2_item">w</div>
+					<div class="h2_item">n</div>
+				</div>
+			</div>
+		</div>
+		<div id="c1" class="c1">
+			<div class="c11">
+				<img src="images/radius.jpg">
+			</div>
+		</div>
+		<div class="c2">
+			<div id="c21" class="c21">
+				<a href="##"><div id="c21_pic1" class="c21_pic">見山</div></a>
+				<a href="##"><div id="c21_pic2" class="c21_pic">是山</div></a>
+				<a href="##"><div id="c21_pic3" class="c21_pic">見海</div></a>
+				<a href="##"><div id="c21_pic4" class="c21_pic">是海</div></a>
+				<a href="##"><div id="c21_pic51" class="c21_pic">見山</div></a>
+				<a href="##"><div id="c21_pic62" class="c21_pic">是山</div></a>
+			</div>
+			<div id="test" class="c22" onclick="pic_l()">&lArr;</div>
+			<div class="c23" onclick="pic_r()">&rArr;</div>
+			<div id="c2_fake">0</div>
+		</div>
+		<div class="c3">
+			<div class="c3r col-4">
+				<div class="c3ri">
+					<div class="c3ri1">
+						關於我
+					</div>
+					<div class="c3ri2">
+						<img id="c3ri2p1" src="images/radius.jpg">
+						<div class="c3ri2t">我字坴奉</div>
+						<div class="c3ri2i">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我Rr，將Oo，並且Gg，同時Ee，最後Rr。</div>
+					</div>
+				</div>
+				<div class="c3ri">
+					<div class="c3ri1">目錄</div>
+					<div class="c3ri2">
+						<a href="##"><div class="c3ri2i change_color">
+							創作中條目(1)
+						</div></a>
+						<a href="##"><div class="c3ri2i change_color">
+							無內容條目(2)
+						</div></a>
+					</div>
+				</div>
+			</div>
+			<div class="c3l col-8">
+				<div class="c3li">
+					<a href="##"><div class="c3li0 change_color">創作中條目</div></a>
+					<a href="content/index.html"><div class="c3li1 change_color">
+						這是標題存放處
+					</div></a>
+					<div class="c3li2 change_color">日期:doing...</div>
+					<div class="c3li3">
+						<a href="content/index.html"><img src="content/images/pic1.jpg"></a>
+					</div>
+					<div class="c3li4">片段內容</div>
+					<div class="c3li5">
+						<a href="content/index.html"><div class="c3li5l change_color">Continue Reading...</div></a>
+						<a href="content/index.html#message"><div class="c3li5r change_color">查看留言</div></a>
+					</div>
+				</div>
+				<div class="c3li">
+					<a href="##"><div class="c3li0 change_color">無內容條目</div></a>
+					<a href="##"><div class="c3li1 change_color">
+						這是標題存放處
+					</div></a>
+					<div class="c3li2 change_color">日期:&infin;</div>
+					<div class="c3li3">
+						<a href="##"><img src="images/pic_no.jpg"></a>
+					</div>
+					<div class="c3li4">片段內容</div>
+					<div class="c3li5">
+						<a href="##"><div class="c3li5l change_color">Continue Reading...</div></a>
+						<a href="##"><div class="c3li5r change_color">查看留言</div></a>
+					</div>
+				</div>
+				<div class="c3li">
+					<a href="##"><div class="c3li0 change_color">無內容條目</div></a>
+					<a href="##"><div class="c3li1 change_color">
+						這是標題存放處
+					</div></a>
+					<div class="c3li2 change_color">日期:&infin;</div>
+					<div class="c3li3">
+						<a href="##"><img src="images/pic_no.jpg"></a>
+					</div>
+					<div class="c3li4">片段內容</div>
+					<div class="c3li5">
+						<a href="##"><div class="c3li5l change_color">Continue Reading...</div></a>
+						<a href="##"><div class="c3li5r change_color">查看留言</div></a>
+					</div>
+				</div>
+			</div>
+			<div class="c3r col-4">
+				<div class="c3ri">
+					<div class="c3ri1">瀏覽人次</div>
+					<div class="c3ri2">
+						<div id="c3ri2i">
+							<div id="c3ri2il">
+								<img id="c3ri2p2" src="images/expl.png">
+							</div>
+							<div id="c3ri2ir">2</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			Copyright &copy; 2020 坴奉Roger Blogger
+		</div>
+		<div id="to_top" onclick="to_where(0)">&uArr;</div>
+	</body>
+</html>
