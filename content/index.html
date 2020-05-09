@@ -1,161 +1,171 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="../images/radius.jpg">
-	<title>作業內容</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-</head>
-<body>
-	<div class="header">
-		<div class="header2">
-			<div class="h1">
-				<div id="h11" class="h11" onclick="open_menu()">☰</div>
-				<div id="h12" class="h12">
-					<a href="../index.html"><div class="h12_item">首頁</div></a>
-					<a href="##"><div class="h12_item">相關連結</div></a>
-					<a href="##"><div class="h12_item">熱門文章</div></a>
-				</div>
-			</div>
-			<div class="h2">
-				<div class="h2_item">u</div>
-				<div class="h2_item">n</div>
-				<div class="h2_item">k</div>
-				<div class="h2_item">n</div>
-				<div class="h2_item">o</div>
-				<div class="h2_item">w</div>
-				<div class="h2_item">n</div>
-			</div>
-		</div>
-	</div>
-	<div id="c1" class="c1">
-		<div class="c11">
-			<img src="../images/radius.jpg">
-		</div>
-	</div>
-	<div class="c3">
-		<div class="c3r col-4">
-			<div class="c3ri">
-				<div class="c3ri1">
-					關於我
-				</div>
-				<div class="c3ri2">
-					<img id="c3ri2p1" src="../images/radius.jpg">
-					<div class="c3ri2t">我字坴奉</div>
-					<div class="c3ri2i">&emsp;&emsp;我Rr，將Oo，並且Gg，同時Ee，最後Rr。</div>
-				</div>
-			</div>
-			<div class="c3ri">
-				<div class="c3ri1">目錄</div>
-				<div class="c3ri2">
-					<a href="##"><div class="c3ri2i change_color">
-						創作中條目(1)
-					</div></a>
-					<a href="##"><div class="c3ri2i change_color">
-						無內容條目(2)
-					</div></a>
-				</div>
-			</div>
-		</div>
-		<div class="c3l col-8">
-			<div class="c3li">
-				<div class="c3li5">
-					<div id="to_message" class="c3li5r change_color" onclick="to_where($('#message').offset().top)">查看留言</div>
-				</div>
-				<a href="##"><div class="c3li0 change_color">創作中條目</div></a>
-				<div class="c3li1">曹操短歌行詩</div>
-				<div class="c3li2">日期:2020/May/09</div>
-				<div class="c3li3">
-					<img src="images/for.jpg">
-				</div>
-				<div class="c3li4">
-					<div class="c3li4i">
-						『寧我負人，毋人負我』之曹操短歌行詩
-					</div>
-					<div class="c3li4i">
-						對酒當歌，人生幾何。譬如朝露，去日苦多。<br>
-						慨當以慷，憂思難忘。何以解憂，唯有杜康。<br>
-						青青子衿，悠悠我心。但為君顧，沉吟至今。<br>
-						呦呦鹿鳴，食野之苹。我有嘉賓，鼓瑟吹笙。<br>
-						明明如月，何時可掇。憂從中來，不可斷絕。<br>
-						越陌度阡，忘用相存。契闊談讌，心念舊恩。<br>
-						月明星稀，烏鵲南飛。繞樹三匝，何枝可依。<br>
-						山不厭高，海不厭深。周公吐哺，天下歸心。
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="../images/radius.jpg">
+		<title>作業內容</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header2">
+				<div class="h1">
+					<div id="h11" class="h11" onclick="open_menu()">☰</div>
+					<div id="h12" class="h12">
+						<a href="../index.html"><div class="h12_item">首頁</div></a>
+						<a href="##"><div class="h12_item">相關連結</div></a>
+						<a href="##"><div class="h12_item">熱門文章</div></a>
 					</div>
 				</div>
-				<div class="c3li5">
-					<div class="c3li5l"></div>
-					<div class="c3li5r change_color" onclick="to_where($('#message').offset().top)">以下留言</div>
+				<div class="h2">
+					<div class="h2_item">u</div>
+					<div class="h2_item">n</div>
+					<div class="h2_item">k</div>
+					<div class="h2_item">n</div>
+					<div class="h2_item">o</div>
+					<div class="h2_item">w</div>
+					<div class="h2_item">n</div>
 				</div>
-				<div id="message" class="c3limessage">
-					<div class="c3lim1">
-						<div class="c3lim1t">2&nbsp;則留言:</div>
-						<div class="c3lim1i">
-							<div class="c3lim1il"></div>
-							<div class="c3lim1ir">
-								<div class="c3lim1ir1">
-									<div class="c3lim1ir1l change_color">黑衣人</div>
-									<div class="c3lim1ir1r change_color">2020年4月1日&nbsp;上午04:01</div>
+			</div>
+		</div>
+		<div id="c1" class="c1">
+			<div class="c11">
+				<img src="../images/radius.jpg">
+			</div>
+		</div>
+		<div class="c3">
+			<div class="c3r col-4">
+				<div class="c3ri">
+					<div class="c3ri1">
+						<div>關</div>
+						<div>於</div>
+						<div>我</div>
+					</div>
+					<div class="c3ri2">
+						<img id="c3ri2p1" src="../images/radius.jpg">
+						<div class="c3ri2t">我字坴奉</div>
+						<div class="c3ri2i">&emsp;&emsp;我Rr，將Oo，並且Gg，同時Ee，最後Rr。</div>
+					</div>
+				</div>
+				<div class="c3ri">
+					<div class="c3ri1">
+						<div>目</div>
+						<div>錄</div>
+					</div>
+					<div class="c3ri2">
+						<a href="##"><div class="c3ri2i change_color">
+							創作中條目(1)
+						</div></a>
+						<a href="##"><div class="c3ri2i change_color">
+							無內容條目(2)
+						</div></a>
+					</div>
+				</div>
+			</div>
+			<div class="c3l col-8">
+				<div class="c3li">
+					<div class="c3li5">
+						<div id="to_message" class="c3li5r change_color" onclick="to_where($('#message').offset().top)">查看留言</div>
+					</div>
+					<a href="##"><div class="c3li0 change_color">創作中條目</div></a>
+					<div class="c3li1">曹操短歌行詩</div>
+					<div class="c3li2">日期:2020/May/09</div>
+					<div class="c3li3">
+						<img src="images/for.jpg">
+					</div>
+					<div class="c3li4">
+						<div class="c3li4i">
+							『寧我負人，毋人負我』之曹操短歌行詩
+						</div>
+						<div class="c3li4i">
+							對酒當歌，人生幾何。譬如朝露，去日苦多。<br>
+							慨當以慷，憂思難忘。何以解憂，唯有杜康。<br>
+							青青子衿，悠悠我心。但為君顧，沉吟至今。<br>
+							呦呦鹿鳴，食野之苹。我有嘉賓，鼓瑟吹笙。<br>
+							明明如月，何時可掇。憂從中來，不可斷絕。<br>
+							越陌度阡，忘用相存。契闊談讌，心念舊恩。<br>
+							月明星稀，烏鵲南飛。繞樹三匝，何枝可依。<br>
+							山不厭高，海不厭深。周公吐哺，天下歸心。
+						</div>
+					</div>
+					<div class="c3li5">
+						<div class="c3li5l"></div>
+						<div class="c3li5r change_color" onclick="to_where($('#message').offset().top)">以下留言</div>
+					</div>
+					<div id="message" class="c3limessage">
+						<div class="c3lim1">
+							<div class="c3lim1t">2&nbsp;則留言:</div>
+							<div class="c3lim1i">
+								<div class="c3lim1il"></div>
+								<div class="c3lim1ir">
+									<div class="c3lim1ir1">
+										<div class="c3lim1ir1l change_color">黑衣人</div>
+										<div class="c3lim1ir1r change_color">2020年4月1日&nbsp;上午04:01</div>
+									</div>
+									<div class="c3lim1ir2">愚人節!</div>
+									<div class="c3lim1ir3 change_color">回覆</div>
 								</div>
-								<div class="c3lim1ir2">愚人節!</div>
-								<div class="c3lim1ir3 change_color">回覆</div>
 							</div>
-						</div>
-						<div class="c3lim1i">
-							<div class="c3lim1il"></div>
-							<div class="c3lim1ir">
-								<div class="c3lim1ir1">
-									<div class="c3lim1ir1l change_color">黑衣人2</div>
-									<div class="c3lim1ir1r change_color">2020年4月1日&nbsp;上午16:01</div>
+							<div class="c3lim1i">
+								<div class="c3lim1il"></div>
+								<div class="c3lim1ir">
+									<div class="c3lim1ir1">
+										<div class="c3lim1ir1l change_color">黑衣人2</div>
+										<div class="c3lim1ir1r change_color">2020年4月1日&nbsp;上午16:01</div>
+									</div>
+									<div class="c3lim1ir2">!樂快</div>
+									<div class="c3lim1ir3 change_color">回覆</div>
 								</div>
-								<div class="c3lim1ir2">!樂快</div>
-								<div class="c3lim1ir3 change_color">回覆</div>
 							</div>
 						</div>
-					</div>
-					<div class="c3lim2">
-						<div class="c3lim21">
-							<div class="c3lim211">
-								<textarea></textarea>
+						<div class="c3lim2">
+							<div class="c3lim21">
+								<div class="c3lim211">
+									<textarea></textarea>
+								</div>
+								<div class="c3lim212">
+									<div class="c3lim2121"></div>
+									<div class="c3lim2122">身份:黑衣</div>
+									<div class="c3lim2123 change_color">登出</div>
+								</div>
 							</div>
-							<div class="c3lim212">
-								<div class="c3lim2121"></div>
-								<div class="c3lim2122">身份:黑衣</div>
-								<div class="c3lim2123 change_color">登出</div>
-							</div>
-						</div>
-						<div class="c3lim22">
-							<div class="c3lim221 change_color">發布</div>
-							<div class="c3lim222 change_color">預覽</div>
-							<div class="c3lim223">
-								<input type="checkbox">
-								<div class="c3lim223i">通知我</div>
+							<div class="c3lim22">
+								<div class="c3lim221 change_color">發布</div>
+								<div class="c3lim222 change_color">預覽</div>
+								<div class="c3lim223">
+									<input type="checkbox">
+									<div class="c3lim223i">通知我</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="c3r col-4">
-			<div class="c3ri">
-				<div class="c3ri1">瀏覽人次</div>
-				<div class="c3ri2">
-					<div id="c3ri2i">
-						<div id="c3ri2il">
-							<img id="c3ri2p2" src="../images/expl.png">
+			<div class="c3r col-4">
+				<div class="c3ri">
+					<div class="c3ri1">
+						<div>瀏</div>
+						<div>覽</div>
+						<div>人</div>
+						<div>次</div>
+					</div>
+					<div class="c3ri2">
+						<div id="c3ri2i">
+							<div id="c3ri2il">
+								<img id="c3ri2p2" src="../images/expl.png">
+							</div>
+							<div id="c3ri2ir">2</div>
 						</div>
-						<div id="c3ri2ir">2</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="footer">
-		Copyright &copy; 2020 坴奉Roger Blogger
-	</div>
-	<div id="to_top" onclick="to_where(0)">&uArr;</div>
-</body>
+		<div class="footer">
+			Copyright &copy; 2020 坴奉Roger Blogger
+		</div>
+		<div id="to_top" onclick="to_where(0)">&uArr;</div>
+	</body>
 </html>
