@@ -11,14 +11,6 @@ window.onload = function() {
 // console.timeEnd("test");
 
 // RWD
-window.onresize = function(){
-	if ($(window).width() > 1024) {
-		document.getElementById('cont_main_l_items').style.display = "block";
-	}
-	else {
-		document.getElementById('cont_main_l_items').style.display = "none";
-	}
-}
 function open_index(th) {
 	if (document.getElementById('cont_main_l_items').style.display === "block") {
 		$('#cont_main_l_items').slideUp(400);
