@@ -102,7 +102,7 @@ a {
 	background-color: #FF8;
 }
 #cont_main_l_phone_index {
-	margin: 20px;
+	margin-top: 20px;
 	border-radius: 10px;
 	padding: 10px;
 	text-align: center;
@@ -307,6 +307,7 @@ a {
 	#tool {display: none;}
 	#cont {width: 100%;}
 	.cont_main_l {width: 100%;}
+	#cont_main_l_phone_index {display: block;}
 	#cont_main_l_items {
 		max-height: 80vh;
 		overflow: scroll;
@@ -315,7 +316,6 @@ a {
 		display: none;
 	}
 
-	#cont_main_l_phone_index {display: block;}
 	#cont_main_r {
 		width: 100%;
 		border-left: unset;
