@@ -5,7 +5,7 @@ var down = '\
 				</div>\
 			</div>\
 \
-			<div style="height: 156px;"></div>\
+			<div style="height: 1px;"></div>\
 		</div>\
 \
 		<div id="running" class="running">\

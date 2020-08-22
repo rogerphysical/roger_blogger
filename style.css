@@ -10,7 +10,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 
-	background-color: #F8F8F8;
+	background-color: #004;
 
 	font-family: papyrus, cursive;
 }
@@ -48,6 +48,7 @@ a {
 	width: calc(100% -  400px);
 	margin: auto;
 	margin-top: calc(100vh - 160px);
+	margin-bottom: 156px;
 }
 
 #music_cont {
@@ -303,8 +304,12 @@ a {
 }
 
 @media(max-width: 1024px) {
+	body {background-image: unset;}
 	#stars {display: none;}
-	#cont {margin-top: 200px;}
+	#cont {
+		margin-top: 200px;
+		margin-bottom: 0px;
+	}
 
 	#running {display: none;}
 	#tool {display: none;}
