@@ -129,7 +129,7 @@ a {
 	color: #000;
 	user-select: none;
 }
-.cont_main_l_item:hover, #cont_main_l_phone_index:hover {
+.cont_main_l_item:hover, #cont_main_l_phone_index {
 	cursor: pointer;
 	box-shadow: 2px 2px 2px 1px;
 	background-color: #FE7;
@@ -303,8 +303,12 @@ a {
 }
 
 @media(max-width: 1024px) {
+	#stars {display: none;}
+	#cont {margin-top: 200px;}
+
 	#running {display: none;}
 	#tool {display: none;}
+
 	#cont {width: 100%;}
 	.cont_main_l {width: 100%;}
 	#cont_main_l_phone_index {display: block;}

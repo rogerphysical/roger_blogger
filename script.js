@@ -5,6 +5,7 @@ var talk_id2 = 0;
 window.onload = function() {
 	auto_talk();
 	// star_sky();
+	// document.getElementById('cont_main_l_items').style.display = $(window).width() > 1024?"block":"none";
 }
 // 測試效率
 // console.time("test");
