@@ -1,0 +1,44 @@
+#c_title {
+	/*height: 140px;*/
+	line-height: 120px;
+	font-size: 40px;
+	text-align: center;
+	/*font-family: papyrus, cursive;*/
+}
+.c_item {
+	margin: 20px;
+	border-top: 1px solid #404;
+	padding: 20px;
+	overflow: hidden;
+}
+.c_i_link {
+	cursor: pointer;
+	color: #000;
+	transition: background-color 1s;
+}
+.c_i_link:hover {
+	box-shadow: 2px 2px 2px 1px;
+	background-color: #FE7;
+}
+.c_i_tital {
+	padding: 10px;
+	text-align: center;
+	font-size: 28px;
+}
+.c_i_img {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.c_i_img img {
+	max-width: 100%;
+	max-height: 400px;
+}
+.c_i_cont {
+	padding: 10px;
+}
+.c_i_parag {
+	padding: 10px;
+	text-indent: 100px;
+}
