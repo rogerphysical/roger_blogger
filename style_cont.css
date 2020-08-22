@@ -41,3 +41,10 @@
 	padding: 10px;
 	text-indent: 40px;
 }
+
+@media(max-width: 1024px) {
+	.c_item {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
