@@ -10,7 +10,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 
-	background-color: #004;
+	background-color: #86A;
 
 	font-family: papyrus, cursive;
 }
@@ -89,6 +89,7 @@ a {
 	float: left;
 }
 #cont_main_l_img {
+	position: relative;
 	width: 120px;
 	height: 120px;
 	margin: auto;
@@ -102,6 +103,17 @@ a {
 	box-shadow: 0 0 20px 0px #404;
 	background-color: #FF8;
 }
+#cont_main_l_img1, #cont_main_l_img2 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	max-height: 100%;
+}
+
+#cont_main_l_img2 {
+	display: none;
+}
+
 #cont_main_l_phone_index {
 	margin-top: 20px;
 	border-radius: 10px;

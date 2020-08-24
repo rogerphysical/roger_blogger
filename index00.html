@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>Roger的實驗洪流/模板</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style_cont.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body onkeydown="key_point()">
+		<div id="stars">
+			<div class="star" style="left: 80%; top: 26%;"></div>
+			<div class="star" style="left: 73%; top: 12%;"></div>
+			<div class="star" style="left: 58%; top: 26%;"></div>
+			<div class="star" style="left: 57%; top: 41%;"></div>
+			<div class="star" style="left: 34%; top: 35%;"></div>
+			<div class="star" style="left: 25%; top: 39%;"></div>
+			<div class="star" style="left: 17%; top: 69%;"></div>
+			<!-- <div class="star" style="left: 33%; top: 66%;"></div> -->
+			<div class="star" style="left: 57%; top: 71%;"></div>
+			<div class="star" style="left: 63%; top: 51%;"></div>
+			<div class="star" style="left: 81%; top: 74%;"></div>
+			<div class="star" style="left: 68%; top: 80%;"></div>
+
+			<div id="star_space" class="star" style="left: 33%; top: 66%; background-image: unset;" ondragover="dragover(event)" ondrop="drop(event)"></div>
+		</div>
+		
+		<div style="height: 1px;"></div>
+		<div id="cont">
+			<div id="music_cont">
+				<audio id="music" controls loop src="files/music.mp3"></audio>
+			</div>
+
+			<div id="cont_top_pic" onclick="one_talk('曲名:春之頌<br>Into The Joy of Spring')">
+				<img id="cont_top_img" src="files/animal.png">
+			</div>
+
+			<div id="cont_main">
+				<div class="cont_main_l">
+					<div id="cont_main_l_img">
+						<a href="index.html">
+							<img style="max-height: 100%; curso: pointer;" src="files/super_roger.png">
+						</a>
+					</div>
+
+					<div id="cont_main_l_phone_index" onclick="open_index(this)">目錄</div>
+					<div id="cont_main_l_items">
+						<a href="index.html"><div class="cont_main_l_item">首頁</div></a>
+					</div>
+				</div>
+				<div id="cont_main_r">
+
+<!-- 分割線 -->
+
+				</div>
+				<div class="cont_main_l">
+					<div id="cont_main_footer">Copyright &copy; 2020 坴奉Roger</div>
+				</div>
+			</div>
+
+			<div style="height: 156px;"></div>
+		</div>
+
+		<div id="running" class="running">
+			<img id="radies" src="files/radies.png">
+			<div id="star_point" class="star" draggable="true" ondragstart="dragstart(event)"></div>
+		</div>
+
+		<div id="tool">
+			<div id="tool2"></div>
+			<div id="tool11" onmouseleave="close_tools()">
+				<div id="tool11_main" style="width: 100%; height: 100%;">
+					<div class="tool11_item" onclick="to_where()">前往彼端</div>
+					<div class="tool11_item" onclick="ball_other(this)">滾球切換</div>
+					<div class="tool11_item" onclick="star_sky(this)">觀測星空</div>
+					<div class="tool11_item" onclick="to_talk()">與其對話</div>
+				</div>
+				<div id="tool11_item">
+					<div>你想說:</div>
+					<input id="tool11_item_ok" type="text" onkeydown="talking2(event)">
+					<input id="tool11_item_ok2" type="buttom" value="對話" onclick="talking()">
+				</div>
+			</div>
+
+			<div id="tool12_2">
+				<img id="bird_2" src="files/bird_f.png">
+			</div>
+			<div id="tool12" onmouseenter="show_tools()">
+				<img id="bird" src="files/bird.png">
+			</div>
+
+		</div>
+	</body>
+</html>

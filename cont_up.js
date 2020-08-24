@@ -33,7 +33,8 @@ var up = '\
 				<div class="cont_main_l">\
 					<div id="cont_main_l_img">\
 						<a href="index.html">\
-							<img style="max-height: 100%; curso: pointer;" src="files/super_roger.png">\
+							<img id="cont_main_l_img1" src="files/magic_square.png"  onmouseenter="img_change()">\
+							<img id="cont_main_l_img2" src="files/magic_square2.png"  onmouseleave="img_change2()">\
 						</a>\
 					</div>\
 \

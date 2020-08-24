@@ -68,7 +68,7 @@ function auto_talk2() {
 	"我討厭烏雲在我眼前亂飄...",
 	"星星為什麼會一閃一閃的?",
 	"你看過哪些天上的星座呢?",
-	"缺了一塊的那顆心總是努力奔馳著~~",
+	"缺了一塊的那顆心在那兒呢~~",
 	"麻雀有時也能變鳳凰!",
 	"天將降大任於鳳凰也",
 	"天空為什麼是藍色的?",
@@ -107,6 +107,16 @@ function one_talk(str) {
 	clearInterval(talk_id);
 	clearTimeout(talk_id2);
 	talk_id2 = setTimeout(()=> auto_talk(), 10000);
+}
+
+// 
+function img_change() {
+	$('#cont_main_l_img1').fadeOut(400);
+	$('#cont_main_l_img2').fadeIn(800);
+}
+function img_change2() {
+	$('#cont_main_l_img2').fadeOut(400);
+	$('#cont_main_l_img1').fadeIn(800);
 }
 
 // 工具開關

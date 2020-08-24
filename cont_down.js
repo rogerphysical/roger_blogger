@@ -5,8 +5,9 @@ var down = '\
 				</div>\
 			</div>\
 \
-			<div style="height: 1px;"></div>\
 		</div>\
+\
+		<div style="height: 1px;"></div>\
 \
 		<div id="running" class="running">\
 			<img id="radies" src="files/radies.png">\
