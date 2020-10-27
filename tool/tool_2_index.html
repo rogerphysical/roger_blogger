@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="icon" type="image/x-icon" href="files_basic/magic_square3.ico">
+		<title>Roger的實驗洪流</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style_cont.css">
+		<link rel="stylesheet" type="text/css" href="tool_2_style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="tool_2_script.js"></script>
+	</head>
+	<script type="text/javascript" src="script_cont_up.js"></script>
+
+	<div id="c_title">各種計算</div>
+
+	<div class="c_item">
+		<div class="c_i_tital">亂數挑選器</div>
+
+		<div class="c2_item">
+			<input id="c2_reset" class="c2_ii" style="cursor: pointer;display: none;" type="button" value="重新配置" onclick="c2_reset()">
+			<div>從</div>
+			<input id="c2_x" class="c2_ii c2_arrow_hiden" type="number" value="1" oninput="value=value.replace('.','')" onfocus="this.select()">
+			<div>到</div>
+			<input id="c2_y" class="c2_ii c2_arrow_hiden" type="number" value="10" oninput="value=value.replace('.','')" onfocus="this.select()">
+			<div style="margin-top: 20px;">抽取數量</div>
+			<input id="c2_z" class="c2_ii c2_arrow_hiden" type="number" value="1" oninput="value=value.replace('.','')" onfocus="this.select()">
+			<div class="c2_ii">
+				<input id="c2_check" style="cursor: pointer;" type="checkbox" checked>
+				<label>不重複抽取</label>
+			</div>
+			<input id="c2_ok" class="c2_ii" style="cursor: pointer;" type="button" value="配置完成" onclick="c2_ok()">
+			<input id="c2_go" class="c2_ii" style="cursor: pointer;display: none;" type="button" value="開始抽取" onclick="c2_start()">
+			
+		</div>
+		<div class="c2_item">
+			<div class="c2_ii">結果</div>
+			<div id="c2_result" class="c2_ii c2_ran"></div>
+		</div>
+		<div class="c2_item">
+			<div class="c2_ii">抽取紀錄</div>
+			<div id="c2_record" class="c2_ii c2_ran"></div>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="script_cont_down.js"></script>
+</html>

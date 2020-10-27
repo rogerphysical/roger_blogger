@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="icon" type="image/x-icon" href="files_basic/magic_square3.ico">
+		<title>Roger的實驗洪流</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style_cont.css">
+		<link rel="stylesheet" type="text/css" href="tool_3_style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="tool_3_script.js"></script>
+	</head>
+	<script type="text/javascript" src="script_cont_up.js"></script>
+
+	<div id="c_title">各種計算</div>
+
+	<div class="c_item">
+		<div class="c_i_tital">權重挑選器</div>
+
+		<div class="c3_item" style="padding-left: 20px;padding-right: 20px;">
+			<input id="c3_reset" class="c3_ii" style="cursor: pointer;display: none;" type="button" value="重新配置" onclick="c3_reset()">
+			<div class="c3_ii">
+				<div id="c3_ii_t">
+					<input id="c3_ii_t1" type="text" placeholder="請輸入項目" onfocus="this.select()">
+					<input id="c3_ii_t2" type="number" placeholder="權重" value="1" oninput="value=value.replace('.','')" onfocus="this.select()">
+					<input id="c3_ii_t3" type="button" value="+" onclick="c3_add(this)">
+				</div>
+
+				<div class="c3_ii_i">
+					<div class="c3_ii_i1">項目</div>
+					<div class="c3_ii_i2">權重</div>
+					<input class="c3_ii_i3" type="button" value="clear" onclick="c3_clear_all()">
+				</div>
+
+				<div id="c3_iii" class="c3_main"></div>
+
+			</div>
+			
+			<input id="c3_ok" class="c3_ii" style="cursor: pointer;" type="button" value="配置完成" onclick="c3_ok()">
+			<input id="c3_go" class="c3_ii" style="cursor: pointer;display: none;" type="button" value="開始抽取" onclick="c3_start()">
+			
+		</div>
+		<div class="c3_item">
+			<div class="c3_ii">結果</div>
+			<div id="c3_result" class="c3_ii c3_ran"></div>
+		</div>
+		<div class="c3_item">
+			<div class="c3_ii">抽取紀錄</div>
+			<div id="c3_record" class="c3_ii c3_ran"></div>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="script_cont_down.js"></script>
+</html>

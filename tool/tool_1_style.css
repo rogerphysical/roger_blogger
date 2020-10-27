@@ -1,0 +1,94 @@
+#c11 {
+	max-width: 440px;
+	margin: auto;
+	overflow: hidden;
+	font-size: 24px;
+}
+#c11_title {
+	width: calc(100% - 10px);
+	height: 100px;
+	margin: 5px;
+	border: 2px solid #222;
+	border-radius: 10px;
+	padding: 10px;
+	overflow: hidden;
+
+	background-color: #FDFDFD;
+}
+#c11_t1 {
+	width: calc(100% - 20px);
+	float: left;
+	font-size: 20px;
+}
+#c11_t2 {
+	width: 20px;
+	text-align: right;
+	float: left;
+	font-size: 20px;
+}
+#c11_t3 {
+	text-align: right;
+	font-size: 40px;
+	user-select: text;
+}
+
+.c11_item {
+	float: left;
+	width: calc(25% - 10px);
+	height: 44px;
+	margin: 5px;
+	border: 1px solid #222;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #EEE;
+}
+.c11_item:hover {
+	background-color: #FDFDFD;
+	cursor: pointer;
+}
+.c11_item:active {
+	background-color: #BBB;
+	cursor: pointer;
+}
+
+#c12 {
+	max-width: 440px;
+	margin: auto;
+	margin-top: 20px;
+	overflow: hidden;
+	font-size: 28px;
+}
+.c12_item {
+	width: 100%;
+	height: 60px;
+	border: 1px solid #222;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.c12_i1 {
+	float: left;
+	width: calc(100% - 40px);
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 60px;
+	user-select: text;
+}
+.c12_i2 {
+	float: left;
+	width: 40px;
+	border-radius: 10px;
+	line-height: 60px;
+	text-align: center;
+}
+.c12_i1:hover, .c12_i2:hover {
+	background-color: #F42;
+	cursor: pointer;
+}
+#c1_tips {
+	text-align: center;
+	margin-top: 100px;
+}

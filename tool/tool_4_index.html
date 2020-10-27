@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="icon" type="image/x-icon" href="files_basic/magic_square3.ico">
+		<title>Roger的實驗洪流</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style_cont.css">
+		<link rel="stylesheet" type="text/css" href="tool_4_style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="tool_4_script.js"></script>
+	</head>
+	<script type="text/javascript" src="script_cont_up.js"></script>
+
+	<div id="c_title">各種計算</div>
+
+	<div class="c_item">
+		<div class="c_i_tital">神魔計算器</div>
+
+		<div class="c4_item">
+			<div class="c4_ii">隊伍空間</div>
+			<input id="c4_x" class="c4_ii c4_arrow_hiden" type="number" placeholder="輸入隊伍空間" onfocus="this.select()" onkeydown="to_ok(event, 1)">
+			<div class="c4_ii">所需最小等級</div>
+
+			<input class="c4_b" type="button" value="查詢" onclick="c4_ok()">
+
+			<div id="c4_sol" class="c4_sol"></div>
+
+		</div>
+
+		<div class="c4_item">
+			<div class="c4_ii">等級</div>
+			<input id="c4_x2" class="c4_ii c4_arrow_hiden" type="number" placeholder="輸入等級" onfocus="this.select()" onkeydown="to_ok(event, 2)">
+			<div class="c4_ii">擁有隊伍空間</div>
+
+			<input class="c4_b" type="button" value="查詢" onclick="c4_ok2()">
+
+			<div id="c4_sol2" class="c4_sol"></div>
+
+		</div>
+		
+	</div>
+
+	<div id="c4_tips">Tips:精確範圍，隊伍空間介於1~202、等級介於1~1000</div>
+
+	<script type="text/javascript" src="script_cont_down.js"></script>
+</html>

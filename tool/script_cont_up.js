@@ -40,10 +40,10 @@ var up = '\
 \
 					<div id="cont_main_l_phone_index" onclick="open_index(this)">目錄</div>\
 					<div id="cont_main_l_items">\
-						<a href="index.html"><div class="cont_main_l_item">首頁</div></a>\
-						<a href="index1.html"><div class="cont_main_l_item">各種計算</div></a>\
-						<a href="index2.html"><div class="cont_main_l_item">其他</div></a>\
-						<a href="index0.html"><div class="cont_main_l_item">關於本lab的某些事</div></a>\
+						<a href="../index.html"><div class="cont_main_l_item">首頁</div></a>\
+						<a href="../index1.html"><div class="cont_main_l_item">各種計算</div></a>\
+						<a href="../index2.html"><div class="cont_main_l_item">其他</div></a>\
+						<a href="../index0.html"><div class="cont_main_l_item">關於本lab的某些事</div></a>\
 					</div>\
 				</div>\
 				<div id="cont_main_r">';
