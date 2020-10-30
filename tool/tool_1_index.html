@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<link rel="icon" type="image/x-icon" href="files_basic/magic_square3.ico">
 		<title>Roger的實驗洪流</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="style_cont.css">
 		<link rel="stylesheet" type="text/css" href="tool_1_style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
 		<script type="text/javascript" src="tool_1_script.js"></script>
-	</head>
-	<script type="text/javascript" src="script_cont_up.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+	<script type="text/javascript" src="../inner_script_cont_up.js"></script>
 
-	<div id="c_title">各種計算</div>
+	<div id="c_title" class="c_i_link" onclick="location.href = '../index1.html'">各種計算</div>
 
 	<div class="c_item">
 		<div class="c_i_tital">簡易計算機</div>
 
-		<div id="c11">
-			<div id="c11_title">
-				<div>
-					<div id="c11_t1"></div>
-					<div id="c11_t2"></div>
+		<div class="c_i_center" style="max-width: 440px; margin: auto; overflow: hidden;">
+			<div id="co_title">
+				<div id="co_t1">
+					<div class="co_tt0">&rsaquo;</div>
+					<div id="co_tt1"></div>
+					<div id="co_tt2"></div>
 				</div>
-				<div id="c11_t3"></div>
-			</div>
-			<div class="c11_item" style="width: calc(100% - 10px);" onclick="c1_save()">暫存於下方</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">AC</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">C</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">CE</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">&plusmn;</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">7</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">8</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">9</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">&divide;</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">4</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">5</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">6</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">&times;</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">1</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">2</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">3</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">-</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">0</div>
-			<div class="c11_item" onclick="c1_num(this.innerHTML)">.</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">=</div>
-			<div class="c11_item" onclick="c1_use(this.innerHTML)">+</div>
-		</div>
-		<div id="c12">
-			<div class="c12_item">
-				<div class="c12_i1" style="width: 100%;" onclick="c1_clear()">清除全部暫存</div>
-			</div>
 
-			<div id="c12_i"></div>
+				<div id="co_t2">
+					<div class="co_tt0">&nbsp;</div>
+					<div id="co_tt3"></div>
+				</div>
+
+			</div>
+			<div class="co_item" style="width: calc(100% - 10px);" onclick="co_save()">暫存於下方</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">AC</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">C</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">CE</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">&plusmn;</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">7</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">8</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">9</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">&divide;</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">4</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">5</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">6</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">&times;</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">1</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">2</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">3</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">-</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">0</div>
+			<div class="co_item" onclick="co_num(this.innerHTML)">.</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">=</div>
+			<div class="co_item" onclick="co_use(this.innerHTML)">+</div>
+
+			<div class="co_item co_red" style="width: calc(100% - 10px); margin-top: 40px;" onclick="co_clear()">清除下方暫存</div>
+
+			<div id="co_save"></div>
+
 		</div>
-		<div id="c1_tips">Tips:供十六位數運算</div>
+
+		<div class="c_i_center" style="margin-top: 100px">Tips:供十六位數運算</div>
 	</div>
 
-	<script type="text/javascript" src="script_cont_down.js"></script>
+	<script type="text/javascript" src="../inner_script_cont_down.js"></script>
 </html>

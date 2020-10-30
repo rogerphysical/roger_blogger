@@ -1,27 +1,19 @@
-.c2_item {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	text-align: center;
-}
-.c2_ii {
+.co_i {
 	margin: auto;
-	margin-top: 4px;
-	margin-bottom: 4px;
 	border-radius: 10px;
-	padding: 4px;
+	padding: 8px;
 	text-align: center;
 }
-.c2_arrow_hiden::-webkit-inner-spin-button {
+.co_arrow_hiden::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
-.c2_ran {
+.co_ran {
+	padding: 10px;
 	background-color: #FDFDFD;
 }
-.c2_ran div {
+.co_ran div {
 	padding: 4px;
 }
-.c2_ran div:nth-child(even) {
+.co_ran div:nth-child(even) {
 	background-color: #DDD;
 }

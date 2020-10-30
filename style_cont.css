@@ -1,13 +1,18 @@
 #c_title {
 	/*height: 140px;*/
+	margin: 10px;
 	line-height: 120px;
 	font-size: 40px;
 	text-align: center;
 	/*font-family: papyrus, cursive;*/
 }
 .c_item {
-	margin: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+	padding: 4px;
 	padding-top: 20px;
+	padding-bottom: 20px;
 	border-top: 1px solid #404;
 	overflow: hidden;
 }
@@ -20,35 +25,42 @@
 	box-shadow: 2px 2px 2px 1px;
 	background-color: #FE7;
 }
-.c_i_tital, .c_i_date {
-	padding: 10px;
+.c_i_tital {
+	padding: 4px;
 	text-align: center;
 	font-size: 28px;
 }
 .c_i_date {
-	padding-top: 0px;
 	font-size: 14px;
 }
 .c_i_img {
+	padding: 4px;
 	overflow: hidden;
-	padding: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .c_i_img img {
-	max-width: 96%;
+	max-width: 100%;
 	max-height: 400px;
 }
-.c_i_cont {
-	padding: 10px;
+.c_i_side {
+	margin-top: 20px;
+	padding: 4px;
+	font-size: 20px;
+}
+.c_i_center {
+	margin-top: 20px;
+	padding: 4px;
+	text-align: center;
+	font-size: 20px;
 }
 .c_i_parag {
-	padding: 10px;
+	padding: 4px;
 	text-indent: 40px;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 768px) {
 	.c_item {
 		margin-left: 0px;
 		margin-right: 0px;

@@ -16,6 +16,7 @@ body {
 }
 
 a {
+	color: unset;
 	text-decoration: none;
 }
 
@@ -32,7 +33,7 @@ a {
 	width: 28px;
 	height: 28px;
 
-	background-image: url(files_basic/star.png);
+	background-image: url(files_basic/star.ico);
 	background-size: cover;
 	user-select: none;
 }
@@ -331,6 +332,10 @@ a {
 	#tool {display: none;}
 
 	#cont_main {border-radius: 0px;}
+	
+
+}
+@media(max-width: 768px) {
 	.cont_main_l {width: 100%;}
 	#cont_main_l_phone_index {display: block;}
 	#cont_main_l_items {

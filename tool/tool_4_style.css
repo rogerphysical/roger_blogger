@@ -1,16 +1,9 @@
-.c4_item {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	text-align: center;
-}
-.c4_ii {
+.co_i {
 	border-radius: 10px;
 	padding: 8px;
 	text-align: center;
 }
-.c4_b {
+.co_b {
 	border-radius: 10px;
 	padding: 4px;
 	padding-left: 20px;
@@ -18,16 +11,12 @@
 	text-align: center;
 	cursor: pointer;
 }
-.c4_arrow_hiden::-webkit-inner-spin-button {
+.co_arrow_hiden::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
-.c4_sol {
+.co_sol {
 	margin: 10px;
 	border-radius: 10px;
 	padding: 10px;
 	background-color: #FDFDFD;
-}
-#c4_tips {
-	text-align: center;
-	margin-top: 100px;
 }
