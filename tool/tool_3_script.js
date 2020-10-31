@@ -52,7 +52,6 @@ function co_reset() {
 	document.getElementById('co_record').innerHTML = "";
 }
 function co_start() {
-	// var check = document.getElementById('c3_check').checked;
 	document.getElementById('co_record').innerHTML += document.getElementById('co_result').innerHTML;
 	document.getElementById('co_result').innerHTML = "";
 
@@ -60,15 +59,15 @@ function co_start() {
 	var item = [];
 	var total = 0;
 	for (var i = 1; i < co_i_i2.length; i++) {
-		var value = parseInt(co_i_i2[i].innerHTML);
+		var value = parseFloat(co_i_i2[i].innerHTML);
 		item.push(value);
 		total += value;
 	}
 
 	if (total !== 0) {
-		pos = 0;
+		var pos = 0;
 		total2 = item[0];
-		var ran = parseInt(Math.random()*total)+1;
+		var ran = Math.random()*total;
 		while (total2 < ran) {
 			pos ++;
 			total2 += item[pos];

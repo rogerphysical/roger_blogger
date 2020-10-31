@@ -24,18 +24,15 @@ function co_ok() {
 	document.getElementById('co_reset').style.display = "block";
 }
 function co_reset() {
-	var judge = confirm("將刪除抽取紀錄\r是否繼續?");
-	if (judge === true) {
-		document.getElementById('co_x').disabled = false;
-		document.getElementById('co_y').disabled = false;
-		document.getElementById('co_z').disabled = false;
-		document.getElementById('co_check').disabled = false;
-		document.getElementById('co_ok').style.display = "block";
-		document.getElementById('co_go').style.display = "none";
-		document.getElementById('co_reset').style.display = "none";
-		document.getElementById('co_result').innerHTML = "";
-		document.getElementById('co_record').innerHTML = "";
-	}
+	document.getElementById('co_x').disabled = false;
+	document.getElementById('co_y').disabled = false;
+	document.getElementById('co_z').disabled = false;
+	document.getElementById('co_check').disabled = false;
+	document.getElementById('co_ok').style.display = "block";
+	document.getElementById('co_go').style.display = "none";
+	document.getElementById('co_reset').style.display = "none";
+	document.getElementById('co_result').innerHTML = "";
+	document.getElementById('co_record').innerHTML = "";
 	
 }
 function co_start() {
