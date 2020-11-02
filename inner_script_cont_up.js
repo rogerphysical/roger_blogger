@@ -39,7 +39,7 @@ var up = '\
 			<div id="cont_main">\
 				<div class="cont_main_l">\
 					<div id="cont_main_l_img">\
-						<a href="index.html">\
+						<a href="../index.html">\
 							<img id="cont_main_l_img1" src="files_basic/magic_square.png"  onmouseenter="img_change()">\
 							<img id="cont_main_l_img2" src="files_basic/magic_square2.png"  onmouseleave="img_change2()">\
 						</a>\
