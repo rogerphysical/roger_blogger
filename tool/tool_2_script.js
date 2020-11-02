@@ -1,3 +1,6 @@
+var index = 0;
+var record = [];
+
 function co_ok() {
 	var x = document.getElementById('co_x').value
 	var y = document.getElementById('co_y').value
@@ -17,7 +20,7 @@ function co_ok() {
 	}
 	document.getElementById('co_x').disabled = true;
 	document.getElementById('co_y').disabled = true;
-	document.getElementById('co_z').disabled = true;
+	// document.getElementById('co_z').disabled = true;
 	document.getElementById('co_check').disabled = true;
 	document.getElementById('co_ok').style.display = "none";
 	document.getElementById('co_go').style.display = "block";
@@ -26,14 +29,17 @@ function co_ok() {
 function co_reset() {
 	document.getElementById('co_x').disabled = false;
 	document.getElementById('co_y').disabled = false;
-	document.getElementById('co_z').disabled = false;
+	// document.getElementById('co_z').disabled = false;
 	document.getElementById('co_check').disabled = false;
 	document.getElementById('co_ok').style.display = "block";
 	document.getElementById('co_go').style.display = "none";
 	document.getElementById('co_reset').style.display = "none";
+
 	document.getElementById('co_result').innerHTML = "";
 	document.getElementById('co_record').innerHTML = "";
-	
+
+	index = 0;
+	record = [];
 }
 function co_start() {
 	var x = parseInt(document.getElementById('co_x').value);
@@ -43,37 +49,33 @@ function co_start() {
 	document.getElementById('co_record').innerHTML += document.getElementById('co_result').innerHTML;
 	document.getElementById('co_result').innerHTML = "";
 
-	var co_record = document.getElementById('co_record').children;
 	var range = y-x+1;
 
-	if (check === false && range < z) {
+	if (check === true && range < z+record.length) {
 		alert("抽取數量過多");
-		return false;
-	}
-	else if (check === true && range < z+co_record.length) {
-		alert("抽取數量過多");
+
 		return false;
 	}
 	else {
-		var record = [];
-		if (check === true) {
-			for (var i = 0; i < co_record.length; i++) {
-				record.push(parseInt(co_record[i].innerHTML));
-			}
-		}
-
 		var co_result = "";
 		var time = 0;
 		while (time < z) {
 			var ran = parseInt(Math.random()*(range))+x;
-			if (!(record.includes(ran))) {
-				record.push(ran);
+			if (check === true) {
+				if (!(record.includes(ran))) {
+					record.push(ran);
+					co_result += "<div>"+ran+"</div>";
+					time ++;
+				}
+			}
+			else {
 				co_result += "<div>"+ran+"</div>";
 				time ++;
 			}
 		}
-
-		document.getElementById('co_result').innerHTML = co_result;
+		index ++;
+		document.getElementById('co_result').innerHTML = "<div>----第"+index+"抽----</div>";
+		document.getElementById('co_result').innerHTML += co_result;
 		return true;
 	}
 }

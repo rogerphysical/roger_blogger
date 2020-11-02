@@ -12,11 +12,11 @@
 	padding: 4px;
 }
 .co_ran div:nth-child(even) {
-	background-color: #DDD;
+	background-color: #EEE;
 }
 
-#co_i_t {
-	height: 60px;
+.co_overflow {
+	overflow: hidden;
 }
 #co_i_t1 {
 	float: left;
@@ -35,13 +35,13 @@
 	padding: 6px;
 	text-align: center;
 }
-#co_i_t2::-webkit-inner-spin-button {
+.co_arrow_hiden::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
 #co_i_t3 {
 	float: left;
 	width: 60px;
-	height: calc(100% - 20px);
+	height: 40px;
 	margin: 10px;
 	border-radius: 10px;
 }
@@ -49,19 +49,26 @@
 	cursor: pointer;
 	background-color: #88F;
 }
+/*line-height配合i1, i2的padding 得到i3的總高*/
 .co_i_i {
-	line-height: 60px;
+	line-height: 36px;
+
 	overflow: hidden;
 }
 .co_i_i1 {
 	float: left;
 	width: calc(100% - 160px);
+	padding: 12px;
 	padding-left: 20px;
+	
 	text-align: left;
 }
 .co_i_i2 {
 	float: left;
 	width: 80px;
+	padding: 12px;
+
+	overflow: auto;
 }
 .co_i_i3 {
 	float: left;
@@ -81,4 +88,8 @@
 }
 #co_main .co_i_i:nth-child(even) {
 	background-color: #DDD;
+}
+#co_main .co_i_i:hover .co_i_i1 {
+	border-left: 10px #848 solid;
+	padding-left: 10px;
 }

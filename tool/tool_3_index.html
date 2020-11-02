@@ -12,25 +12,28 @@
 
 	<div class="c_item">
 		<div class="c_i_tital">權重挑選器</div>
-
-		<div class="c_i_center" style="padding-left: 20px; padding-right: 20px;">
+		
+		<div class="c_i_center co_overflow">
 			<input id="co_reset" class="co_i" style="cursor: pointer; display: none;" type="button" value="重新配置" onclick="co_reset()">
-			<div class="co_i">
-				<div id="co_i_t">
-					<input id="co_i_t1" type="text" placeholder="請輸入項目" onfocus="this.select()">
-					<input id="co_i_t2" type="number" placeholder="權重" value="1" onfocus="this.select()">
-					<input id="co_i_t3" type="button" value="+" onclick="co_add(this)">
-				</div>
 
-				<div class="co_i_i">
-					<div class="co_i_i1">項目</div>
-					<div class="co_i_i2">權重</div>
-					<input class="co_i_i3" type="button" value="clear" onclick="co_clear_all()">
-				</div>
+			<input id="co_i_t1" type="text" placeholder="請輸入項目" onfocus="this.select()">
+			<input id="co_i_t2" class="co_arrow_hiden" type="number" placeholder="權重" value="1" onfocus="this.select()">
+			<input id="co_i_t3" type="button" value="+" onclick="co_add(this)">
+		</div>
 
-				<div id="co_main"></div>
-
+		<div class="c_i_center co_overflow">
+			<div class="co_i_i">
+				<div class="co_i_i1">項目</div>
+				<div class="co_i_i2">權重</div>
+				<input class="co_i_i3" type="button" value="clear" onclick="co_clear_all()">
 			</div>
+			
+			<div id="co_main"></div>
+		</div>
+
+		<div class="c_i_center">
+			<div>抽取數量</div>
+			<input id="co_z" class="co_i co_arrow_hiden" type="number" value="1" oninput="value=value.replace('.','')" onfocus="this.select()">
 		</div>
 		
 		<div class="c_i_center">
@@ -39,11 +42,12 @@
 		</div>
 
 		<div class="c_i_center">
-			<div class="co_i">結果</div>
+			<div>結果</div>
 			<div id="co_result" class="co_i co_ran"></div>
 		</div>
+
 		<div class="c_i_center">
-			<div class="co_i">抽取紀錄</div>
+			<div>抽取紀錄</div>
 			<div id="co_record" class="co_i co_ran"></div>
 		</div>
 		

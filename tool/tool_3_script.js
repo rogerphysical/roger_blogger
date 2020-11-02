@@ -1,3 +1,6 @@
+var index = 0;
+var item = [];
+var total = 0;
 function co_clear_all() {
 	var judge = confirm("確定清空項目?");
 	if (judge === true) {
@@ -12,6 +15,7 @@ function co_add() {
 	var co_i_t2 = document.getElementById('co_i_t2').value;
 	if (co_i_t1 === "" || co_i_t2 < 0) {
 		alert("輸入錯誤");
+		return false
 	}
 	else {
 		var co_main = "<div class=co_i_i>";
@@ -20,6 +24,8 @@ function co_add() {
 		co_main += "<input class=co_i_i3 type=button value=&times; onclick=co_clear(this)>";
 		co_main += "</div>";
 		document.getElementById('co_main').innerHTML += co_main;
+		
+		document.getElementById('co_i_t1').select();
 	}
 }
 function co_ok() {
@@ -33,7 +39,14 @@ function co_ok() {
 	for (var i = 0; i < co_i_i3.length; i++) {
 		co_i_i3[i].disabled = true;
 	}
-	// document.getElementById('c3_check').disabled = true;
+
+	// 填放項目與加總
+	var co_i_i2 = document.getElementsByClassName('co_i_i2');
+	for (var i = 1; i < co_i_i2.length; i++) {
+		var value = parseFloat(co_i_i2[i].innerHTML);
+		item.push(value);
+		total += value;
+	}
 }
 function co_reset() {
 	document.getElementById('co_reset').style.display = "none";
@@ -46,33 +59,36 @@ function co_reset() {
 	for (var i = 0; i < co_i_i3.length; i++) {
 		co_i_i3[i].disabled = false;
 	}
-	// document.getElementById('c3_check').disabled = false;
 
 	document.getElementById('co_result').innerHTML = "";
 	document.getElementById('co_record').innerHTML = "";
+
+	index = 0;
+	item = [];
+	total = 0;
 }
 function co_start() {
 	document.getElementById('co_record').innerHTML += document.getElementById('co_result').innerHTML;
 	document.getElementById('co_result').innerHTML = "";
-
-	var co_i_i2 = document.getElementsByClassName('co_i_i2');
-	var item = [];
-	var total = 0;
-	for (var i = 1; i < co_i_i2.length; i++) {
-		var value = parseFloat(co_i_i2[i].innerHTML);
-		item.push(value);
-		total += value;
-	}
+	var z = parseInt(document.getElementById('co_z').value);
 
 	if (total !== 0) {
-		var pos = 0;
-		total2 = item[0];
-		var ran = Math.random()*total;
-		while (total2 < ran) {
-			pos ++;
-			total2 += item[pos];
+		var co_result = "";
+		var times = 0;
+		while (times < z) {
+			var pos = 0;
+			var total2 = item[0];
+			var ran = Math.random()*total;
+			while (total2 < ran) {
+				pos ++;
+				total2 += item[pos];
+			}
+			// 第0項是標題
+			co_result += "<div>"+document.getElementsByClassName('co_i_i1')[pos+1].innerHTML+"</div>";
+			times ++;
 		}
-
-		document.getElementById('co_result').innerHTML = "<div>"+document.getElementsByClassName('co_i_i1')[pos+1].innerHTML+"</div>";
+		index ++;
+		document.getElementById('co_result').innerHTML = "<div>----第"+index+"抽----</div>";
+		document.getElementById('co_result').innerHTML += co_result;
 	}
 }
