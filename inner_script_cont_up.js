@@ -1,7 +1,7 @@
 var up = '\
 		<meta charset="utf-8">\
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">\
-		<link rel="icon" type="image/x-icon" href="files_basic/magic_square3.ico">\
+		<link rel="icon" type="image/x-icon" href="files_basic/magic_square2.ico">\
 		<link rel="stylesheet" type="text/css" href="../style.css">\
 		<link rel="stylesheet" type="text/css" href="../style_cont.css">\
 		<script type="text/javascript" src="../script.js"></script>\
@@ -47,7 +47,7 @@ var up = '\
 \
 					<div id="cont_main_l_phone_index" onclick="open_index(this)">目錄</div>\
 					<div id="cont_main_l_items">\
-						<a href="../index.html"><div class="cont_main_l_item">首頁</div></a>\
+						<a href="../index.html"><div class="cont_main_l_item">Roger的實驗洪流</div></a>\
 						<a href="../index1.html"><div class="cont_main_l_item">各種計算</div></a>\
 						<a href="../index2.html"><div class="cont_main_l_item">展示櫥窗</div></a>\
 						<a href="../index4.html"><div class="cont_main_l_item">其他</div></a>\
