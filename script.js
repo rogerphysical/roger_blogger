@@ -74,7 +74,7 @@ function auto_talk2() {
 	"天空為什麼是藍色的?",
 	"海什麼時候才能填滿阿!",
 	"鮮紅勳章啣到一半就不知滾到哪了...",
-	"飛上枝頭打個捆~~",
+	"飛上枝頭打個睏~~",
 	"我去過的星座比繪本裡的黑白頁還多!"
 	];
 	var text = talk_cont[parseInt(Math.random()*talk_cont.length)];
@@ -85,16 +85,16 @@ function auto_talk3() {
 	var new_time = new Date().getHours();
 
 	if (new_time >= 5 && new_time < 11) {
-		var text = parseInt(Math.random()*2) === 0?"早起是有什麼可以吃!":"五更雞已鳴，是要醒還是要睡了?";
+		var text = Math.random() < 0.5?"早起是有什麼可以吃!":"五更雞已鳴，是剛醒還是要睡了?";
 	}
 	else if (new_time >= 11 && new_time < 17) {
-		var text = parseInt(Math.random()*2) === 0?"午餐必須吃，鳳凰如是說。":"今天的日頭真的是~~";
+		var text = Math.random() < 0.5?"午餐必須吃，鳳凰如是說。":"今天的天氣真的是~~";
 	}
 	else if (new_time >= 17 && new_time < 23) {
-		var text = parseInt(Math.random()*2) === 0?"晚餐吃了沒?":"要休息了嗎?還是再加把勁~~";
+		var text = Math.random() < 0.5?"晚餐吃了沒?":"要休息了嗎?還是再加把勁~~";
 	}
 	else {
-		var text = parseInt(Math.random()*2) === 0?"嘿!睡不著阿~吃..聊個天?":"三更已過，還醒著嗎?";
+		var text = Math.random() < 0.5?"嘿!睡不著阿~吃..聊個天如何?":"三更已過，還醒著嗎?";
 	}
 
 	document.getElementById('tool2').innerHTML = text;
@@ -153,7 +153,8 @@ function to_where() {
 	}
 	else {
 		// 移至最下
-		$('html, body').animate({scrollTop: $('body').height()-$(window).height()}, 200);
+		// 本頁body不包含上方空白與下方空白(剛好一個$(window).height())
+		$('html, body').animate({scrollTop: $('body').height()}, 200);
 	}
 }
 

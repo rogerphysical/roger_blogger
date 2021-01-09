@@ -47,6 +47,7 @@ function co_ok() {
 		item.push(value);
 		total += value;
 	}
+	$('html, body').animate({scrollTop: $(".c_i_center:eq(2)").offset().top}, 200);
 }
 function co_reset() {
 	document.getElementById('co_reset').style.display = "none";

@@ -4,6 +4,20 @@
 	padding: 8px;
 	text-align: center;
 }
+.co_i_bu{
+	margin: auto;
+	border-radius: 10px;
+	padding: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	text-align: center;
+	font-size: 20px;
+}
+.co_i_bu:hover {
+	cursor: pointer;
+	background-color: #88F;
+}
 .co_arrow_hiden::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }

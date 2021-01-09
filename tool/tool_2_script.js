@@ -25,6 +25,8 @@ function co_ok() {
 	document.getElementById('co_ok').style.display = "none";
 	document.getElementById('co_go').style.display = "block";
 	document.getElementById('co_reset').style.display = "block";
+
+	$('html, body').animate({scrollTop: $(".c_i_center:eq(2)").offset().top}, 200);
 }
 function co_reset() {
 	document.getElementById('co_x').disabled = false;

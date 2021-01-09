@@ -95,7 +95,7 @@ a {
 	height: 120px;
 	margin: auto;
 	border-radius: 50%;
-	border: 2px solid #808;
+	border: 2px solid #404;
 	overflow: hidden;
 	transition: box-shadow 1s, background-color 1s;
 }
@@ -141,10 +141,10 @@ a {
 	font-size: 20px;
 
 	color: #000;
+	cursor: pointer;
 	user-select: none;
 }
 .cont_main_l_item:hover, #cont_main_l_phone_index {
-	cursor: pointer;
 	box-shadow: 2px 2px 2px 1px;
 	background-color: #FE7;
 }

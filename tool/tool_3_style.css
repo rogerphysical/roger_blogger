@@ -18,6 +18,21 @@
 .co_overflow {
 	overflow: hidden;
 }
+.co_i_bu{
+	margin: auto;
+	border-radius: 10px;
+	padding: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	text-align: center;
+	font-size: 20px;
+}
+.co_i_bu:hover {
+	cursor: pointer;
+	background-color: #88F;
+}
+
 #co_i_t1 {
 	float: left;
 	width: calc(100% - 180px);
@@ -74,7 +89,7 @@
 	float: left;
 	width: 60px;
 	height: 40px;
-	margin:10px;
+	margin: 10px;
 	border-radius: 10px;
 }
 .co_i_i3:hover {
