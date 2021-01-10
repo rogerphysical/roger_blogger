@@ -8,7 +8,7 @@ var down = '\
 \
 		</div>\
 \
-		<div id="running" class="running">\
+		<div id="running">\
 			<img id="radies" src="files_basic/radies.png">\
 			<div id="star_point" class="star" draggable="true" ondragstart="dragstart(event)"></div>\
 		</div>\
@@ -18,7 +18,7 @@ var down = '\
 			<div id="tool11" onmouseleave="close_tools()">\
 				<div id="tool11_main" style="width: 100%; height: 100%;">\
 					<div class="tool11_item" onclick="to_where()">前往彼端</div>\
-					<div class="tool11_item" onclick="ball_other(this)">滾球切換</div>\
+					<div class="tool11_item" onclick="ball_other3(this)">滾球切換</div>\
 					<div class="tool11_item" onclick="star_sky()">觀測星空</div>\
 					<div class="tool11_item" onclick="to_talk()">與其對話</div>\
 				</div>\

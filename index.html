@@ -13,19 +13,37 @@
 		<div class="c_i_img">
 			<img src="files/magic_square_move.gif" style="border-radius: 50%;">
 		</div>
-		<div class="c_i_cont">實驗操作者: Roger。</div>
-		<div class="c_i_cont">實驗對象: 1、0。</div>
-		<div class="c_i_cont">實驗內容: 各種有趣、不無趣、好不有趣、不好不無趣的事。</div>
-		<div class="c_i_cont">實驗目的: 觀測出實驗對象的各種有趣事物。</div>
-		<div class="c_i_cont">預計實驗時長: &infin;。</div>
+		<div class="c_i_parag">實驗操作者: Roger。</div>
+		<div class="c_i_parag">實驗對象: 1、0。</div>
+		<div class="c_i_parag">實驗內容: 各種有趣、不無趣、好不有趣、不好不無趣的事。</div>
+		<div class="c_i_parag">實驗目的: 觀測出實驗對象的各種有趣事物。</div>
+		<div class="c_i_parag">預計實驗時長: &infin;。</div>
 	</div>
 
-	<div class="c_item">
+	<div class="c_item c_i_link" onclick="face_change()">
 		<div class="c_i_tital">關於我</div>
+		<div style="margin: auto; padding: 4px; max-width: 200px; text-align: center; font-size: 40px; overflow: hidden;">
+			<div id="face_1" style="float: left; width: 50%;">?</div>
+			<div id="face_2" style="float: right; width: 50%;">?</div>
+			<div id="face_3" style="float: left; width: 100%;">?</div>
+		</div>
 		<div class="c_i_parag">
 			我字坴奉，也可以叫我Roger。喜歡創作與構思新事物，興趣是各種有趣、不無趣、好不有趣、不好不無趣的事。
 		</div>
 	</div>
 
 	<script type="text/javascript" src="script_cont_down.js"></script>
+
+	<script>
+		function face_change() {
+			id = ['face_1', 'face_2', 'face_3'];
+			choise = ['o', 'x', '&hearts;', '<', '=', '>', '+', '-', '~', '@', '^', '*'];
+			for (var i = 0; i < id.length; i++) {
+				index = parseInt(Math.random()*choise.length);
+				document.getElementById(id[i]).innerHTML = choise[index];
+				choise.splice(index, 1);
+			}
+		}
+	</script>
+
 </html>
