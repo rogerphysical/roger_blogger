@@ -18,9 +18,9 @@ function co_start(th) {
 	prepare();
 	co_start_end(th);
 
-	th.onclick = function() {
-		co_start_end(th);
-	}
+	th.setAttribute("onclick", "co_start_end('th')");
+
+	document.getElementById('co_bottom').innerHTML += '<div id="co_reset" class="co_b c_i_link" onclick="co_reset()">reset</div>';
 }
 function co_start_end(th) {
 	if (start == 0) {
