@@ -126,6 +126,7 @@ a {
 	user-select: none;
 
 	display: none;
+	cursor: pointer;
 }
 #cont_main_l_items {
 	margin-top: 10px;
