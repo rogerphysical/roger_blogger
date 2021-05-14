@@ -11,15 +11,17 @@
 	<div id="c_title" class="c_i_link" onclick="location.href = '../index1.html'">各種機器</div>
 
 	<div class="c_item">
-		<div class="c_i_tital">符號書寫器</div>
+		<div class="c_i_tital">繪圖書寫器</div>
 
 		<div class="c_i_center">
 			<div id="co_bottom">
-				<div id="co_start_end" class="co_b c_i_link" onclick="co_start_end(this)">開始書寫</div>
+				<div id="co_start_end" class="co_b c_i_link" onclick="co_start(this)">start</div>
 				<div id="co_reset" class="co_b c_i_link" onclick="co_reset()">reset</div>
 			</div>
 			
-			<iframe id="co_paper" name="frameNameHere" src="tool_5_files/index.html"></iframe>
+			<div id="co_paper" onmousedown="change_color_d()" onmouseup="change_color_u()" onmousemove="change_color_m()">
+				<canvas id="co_write"></canvas>
+			</div>
 
 		</div>
 	</div>
