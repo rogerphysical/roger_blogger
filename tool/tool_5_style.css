@@ -26,3 +26,14 @@
 	transition: height 1s;
 	background-color: #EFEFEF;
 }
+
+.co_i {
+	margin: auto;
+	border-radius: 10px;
+	padding: 8px;
+	text-align: center;
+}
+.co_ran {
+	padding: 10px;
+	background-color: #FDFDFD;
+}

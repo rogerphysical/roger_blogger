@@ -18,11 +18,17 @@
 				<div id="co_start_end" class="co_b c_i_link" onclick="co_start(this)">start</div>
 			</div>
 			
-			<div id="co_paper" onmousedown="change_color_d()" onmouseup="change_color_u()" onmousemove="change_color_m()">
+			<div id="co_paper" onmousedown="change_color_d(event.offsetX, event.offsetY)" onmouseup="change_color_u()" onmousemove="change_color_m(event.offsetX, event.offsetY)">
 				<canvas id="co_write"></canvas>
 			</div>
 
 		</div>
+
+		<div class="c_i_center">
+			<div class="co_i">筆數</div>
+			<div id="co_record" class="co_i co_ran">0</div>
+		</div>
+
 	</div>
 
 	<div class="c_i_center" style="margin-top: 100px;">

@@ -2,11 +2,14 @@ var co_paper = 0;
 var co_write = 0;
 var tool = 0;
 
+var co_record = 0;
+
 function co_start(th) {
 	co_paper = document.getElementById('co_paper');
 	co_write = document.getElementById('co_write');
+	co_record = document.getElementById('co_record');
 
-	co_paper.style.height = 'calc(100vh - 140px)';
+	co_paper.style.height = 'calc(100vh - 150px)';
 	setTimeout(()=> co_reset(), 1000);
 
 	tool = co_write.getContext('2d');
@@ -24,48 +27,58 @@ function co_start_end(th) {
 	$('html, body').animate({scrollTop: target}, 200);
 }
 
+//觸控資訊
+var co_paper_rect = 0;
+var co_paper_left = 0;
+var co_paper_top = 0;
+
+//reset
 function co_reset() {
 	// tool.fillRect(0, 0, co_paper.offsetWidth, co_paper.offsetHeight);
 	co_write.width = co_paper.offsetWidth;
 	co_write.height = co_paper.offsetHeight;
+
+	co_record.innerHTML = '0';
+
+	//觸控資訊
+	co_paper_rect = co_paper.getBoundingClientRect();
+	co_paper_left = co_paper_rect.x;
+	co_paper_top = co_paper_rect.y;
 }
 
+//判斷是否下筆
 var write_down = 0;
-function change_color_d() {
+
+//滑鼠
+function change_color_d(x, y) {
 	write_down = 1
-	tool.moveTo(event.offsetX, event.offsetY);
+	tool.moveTo(x, y);
+	// console.log(x, y);
 }
 function change_color_u() {
 	write_down = 0
+	co_record.innerHTML = parseInt(co_record.innerHTML)+1;
 }
-function change_color_m() {
+function change_color_m(x, y) {
 	if (write_down) {
-		tool.lineTo(event.offsetX, event.offsetY);
-		tool.stroke();
+		tool.lineTo(x, y);
+		tool.stroke();//繪製
+		// console.log(x, y);
 	}
 }
 
-var co_paper_left = 0;
-var co_paper_top = 0;
+//觸控
 function prepare(){
 	co_write.addEventListener('touchstart', function (e) {
 		// e.preventDefault();
-		var co_paper_rect = co_paper.getBoundingClientRect();
-		co_paper_left = co_paper_rect.x;
-		co_paper_top = co_paper_rect.y;
-
-		write_down = 1
-		tool.moveTo(e.changedTouches[0].clientX-co_paper_left, e.changedTouches[0].clientY-co_paper_top);
+		change_color_d(e.changedTouches[0].clientX-co_paper_left, e.changedTouches[0].clientY-co_paper_top);
 	})
 	co_write.addEventListener('touchend', function (e) {
 		// e.preventDefault();
-		write_down = 0
+		change_color_u();
 	})
 	co_write.addEventListener('touchmove', function (e) {
 		e.preventDefault();
-		if (write_down) {
-			tool.lineTo(e.changedTouches[0].clientX-co_paper_left, e.changedTouches[0].clientY-co_paper_top);
-			tool.stroke();
-		}
+		change_color_m(e.changedTouches[0].clientX-co_paper_left, e.changedTouches[0].clientY-co_paper_top);
 	})
 }
