@@ -27,11 +27,6 @@ function co_start_end(th) {
 	$('html, body').animate({scrollTop: target}, 200);
 }
 
-//觸控資訊
-var co_paper_rect = 0;
-var co_paper_left = 0;
-var co_paper_top = 0;
-
 //reset
 function co_reset() {
 	// tool.fillRect(0, 0, co_paper.offsetWidth, co_paper.offsetHeight);
@@ -39,11 +34,6 @@ function co_reset() {
 	co_write.height = co_paper.offsetHeight;
 
 	co_record.innerHTML = '0';
-
-	//觸控資訊
-	co_paper_rect = co_paper.getBoundingClientRect();
-	co_paper_left = co_paper_rect.x;
-	co_paper_top = co_paper_rect.y;
 }
 
 //判斷是否下筆
@@ -68,9 +58,16 @@ function change_color_m(x, y) {
 }
 
 //觸控
+var co_paper_rect = 0;
+var co_paper_left = 0;
+var co_paper_top = 0;
 function prepare(){
 	co_write.addEventListener('touchstart', function (e) {
 		// e.preventDefault();
+		//觸控資訊
+		co_paper_rect = co_paper.getBoundingClientRect();
+		co_paper_left = co_paper_rect.x;
+		co_paper_top = co_paper_rect.y;
 		change_color_d(e.changedTouches[0].clientX-co_paper_left, e.changedTouches[0].clientY-co_paper_top);
 	})
 	co_write.addEventListener('touchend', function (e) {
