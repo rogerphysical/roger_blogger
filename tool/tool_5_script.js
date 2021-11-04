@@ -10,9 +10,10 @@ function co_start(th) {
 	co_record = document.getElementById('co_record');
 
 	co_paper.style.height = 'calc(100vh - 150px)';
-	setTimeout(()=> co_reset(), 1000);
-
+	
 	tool = co_write.getContext('2d');
+
+	setTimeout(()=> co_reset(), 1000);
 
 	prepare();
 	co_start_end(th);
@@ -32,6 +33,8 @@ function co_reset() {
 	// tool.fillRect(0, 0, co_paper.offsetWidth, co_paper.offsetHeight);
 	co_write.width = co_paper.offsetWidth;
 	co_write.height = co_paper.offsetHeight;
+
+	tool.lineWidth = 4;
 
 	co_record.innerHTML = '0';
 }
