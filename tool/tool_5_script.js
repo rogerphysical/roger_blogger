@@ -9,7 +9,7 @@ function co_start(th) {
 	co_write = document.getElementById('co_write');
 	co_record = document.getElementById('co_record');
 
-	co_paper.style.height = 'calc(100vh - 150px)';
+	co_paper.style.height = 'calc(100vh - 100px)';
 	
 	tool = co_write.getContext('2d');
 
@@ -20,11 +20,17 @@ function co_start(th) {
 
 	th.setAttribute("onclick", "co_start_end('th')");
 	th.innerHTML = 'focus';
+    th.style.width = 'calc(20% - 4px)'
 
-	document.getElementById('co_bottom').innerHTML += '<div id="co_reset" class="co_b c_i_link" onclick="co_reset()">reset</div>';
+	document.getElementById('co_tool').innerHTML += '\
+    <div class="co_t">w:&nbsp;</div>\
+    <input id="co_stroke_width" class="co_t co_arrow_hiden" type="number" placeholder="width" onfocus="this.select()" value="4" onKeyUp="if(this.value > 400){this.value=400;}else if(this.value < 0){this.value=0;}">\
+    <div class="co_t">c: #</div>\
+    <input id="co_stroke_color" class="co_t" type="text" placeholder="color" onfocus="this.select()" value="000" maxlength="6">\
+    <div id="co_reset" class="co_b c_i_link" onclick="co_reset()">reset</div>';
 }
 function co_start_end(th) {
-	var target = $("#co_bottom").offset().top;
+	var target = $("#co_tool").offset().top;
 	$('html, body').animate({scrollTop: target}, 200);
 }
 
@@ -34,7 +40,8 @@ function co_reset() {
 	co_write.width = co_paper.offsetWidth;
 	co_write.height = co_paper.offsetHeight;
 
-	tool.lineWidth = 4;
+    tool.lineCap = 'round';
+    tool.lineJoin = "round";;
 
 	co_record.innerHTML = '0';
 }
@@ -44,12 +51,16 @@ var write_down = 0;
 
 //滑鼠
 function change_color_d(x, y) {
-	write_down = 1
+	write_down = 1;
+    tool.beginPath();
+	tool.lineWidth = document.getElementById('co_stroke_width').value;
+    tool.strokeStyle = '#' + document.getElementById('co_stroke_color').value;
 	tool.moveTo(x, y);
+    
 	// console.log(x, y);
 }
 function change_color_u() {
-	write_down = 0
+	write_down = 0;
 	co_record.innerHTML = parseInt(co_record.innerHTML)+1;
 }
 function change_color_m(x, y) {

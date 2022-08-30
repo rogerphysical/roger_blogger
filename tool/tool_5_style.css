@@ -1,14 +1,33 @@
-#co_bottom {
+#co_tool {
 	width: 80%;
-	height: 80px;
+	height: 60px;
+    /* overflow: hidden; */
 	margin: auto;
 	padding: 10px;
 }
 
+.co_t {
+	float: left;
+	width: 15%;
+	height: 40px;
+	/* margin-right: 2px; */
+	/* margin-left: 2px; */
+	border-radius: 10px;
+	
+    text-align:center;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+
+.co_arrow_hiden::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
 .co_b {
 	float: left;
-	width: calc(50% - 4px);
-	height: 100%;
+	width: calc(20% - 4px);
+	height: 40px;
 	margin-right: 2px;
 	margin-left: 2px;
 	border-radius: 10px;
@@ -24,7 +43,7 @@
 	height: 0px;
 
 	transition: height 1s;
-	background-color: #EFEFEF;
+	background-color: #FFF;
 }
 
 .co_i {

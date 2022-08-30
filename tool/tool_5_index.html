@@ -14,9 +14,12 @@
 		<div class="c_i_tital">繪圖書寫器</div>
 
 		<div class="c_i_center">
-			<div id="co_bottom">
-				<div id="co_start_end" class="co_b c_i_link" onclick="co_start(this)">start</div>
-			</div>
+			<!-- <div id="co_bottom"> -->
+			<!-- </div> -->
+
+            <div id="co_tool">
+				<div id="co_start_end" class="co_b c_i_link" style="width:calc(100% - 4px);" onclick="co_start(this)">start</div>
+            </div>
 			
 			<div id="co_paper" onmousedown="change_color_d(event.offsetX, event.offsetY)" onmouseup="change_color_u()" onmousemove="change_color_m(event.offsetX, event.offsetY)">
 				<canvas id="co_write"></canvas>
@@ -32,7 +35,7 @@
 	</div>
 
 	<div class="c_i_center" style="margin-top: 100px;">
-		Tips:寫吧!
+		Tips:繪吧!
 	</div>
 
 	<script type="text/javascript" src="../inner_script_cont_down.js"></script>
