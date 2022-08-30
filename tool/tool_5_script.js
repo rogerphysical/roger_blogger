@@ -22,7 +22,8 @@ function co_start(th) {
 	th.innerHTML = 'focus';
     th.style.width = 'calc(20% - 4px)'
 
-	document.getElementById('co_tool').innerHTML += '\
+	document.getElementById('co_tool').innerHTML = '\
+    <div id="co_focus" class="co_b c_i_link" onclick="co_start_end(th)">focus</div>\
     <div class="co_t">w:&nbsp;</div>\
     <input id="co_stroke_width" class="co_t co_arrow_hiden" type="number" placeholder="width" onfocus="this.select()" value="4" onKeyUp="if(this.value > 400){this.value=400;}else if(this.value < 0){this.value=0;}">\
     <div class="co_t">c: #</div>\

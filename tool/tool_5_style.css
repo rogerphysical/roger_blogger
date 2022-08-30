@@ -1,5 +1,4 @@
 #co_tool {
-	width: 80%;
 	height: 60px;
     /* overflow: hidden; */
 	margin: auto;
@@ -9,15 +8,17 @@
 .co_t {
 	float: left;
 	width: 15%;
-	height: 40px;
+	height: 100%;
 	/* margin-right: 2px; */
 	/* margin-left: 2px; */
 	border-radius: 10px;
 	
     text-align:center;
 	display: flex;
+    display: -webkit-flex;
 	align-items: center;
 	justify-content: right;
+    -webkit-justify-content: right;
 }
 
 .co_arrow_hiden::-webkit-inner-spin-button {
@@ -27,7 +28,7 @@
 .co_b {
 	float: left;
 	width: calc(20% - 4px);
-	height: 40px;
+	height: 100%;
 	margin-right: 2px;
 	margin-left: 2px;
 	border-radius: 10px;
