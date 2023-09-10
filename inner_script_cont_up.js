@@ -9,20 +9,9 @@ var up = '\
 	</head>\
 	<body onkeydown="key_point(event)">\
 		<div id="stars">\
-			<div class="star" style="left: 80%; top: 26%;"></div>\
-			<div class="star" style="left: 73%; top: 12%;"></div>\
-			<div class="star" style="left: 58%; top: 26%;"></div>\
-			<div class="star" style="left: 57%; top: 41%;"></div>\
-			<div class="star" style="left: 34%; top: 35%;"></div>\
-			<div class="star" style="left: 25%; top: 39%;"></div>\
-			<div class="star" style="left: 17%; top: 69%;"></div>\
 			<!-- <div class="star" style="left: 33%; top: 66%;"></div> -->\
-			<div class="star" style="left: 57%; top: 71%;"></div>\
-			<div class="star" style="left: 63%; top: 51%;"></div>\
-			<div class="star" style="left: 81%; top: 74%;"></div>\
-			<div class="star" style="left: 68%; top: 80%;"></div>\
 \
-			<div id="star_space" class="star" style="left: 33%; top: 66%; background-image: unset;" ondragover="dragover(event)" ondrop="drop(event)"></div>\
+			<div id="star_space" class="star" style="left: 34%; top: 78%; background-image: unset;" ondragover="dragover(event)" ondrop="drop(event)"></div>\
 		</div>\
 		\
 		<div id="cont">\
@@ -31,7 +20,7 @@ var up = '\
 			</div>\
 \
 			<div id="cont_top_pic">\
-				<a href="index0.html">\
+				<a href="../index0.html">\
 					<img id="cont_top_img" src="files_basic/animal.png">\
 				</a>\
 			</div>\

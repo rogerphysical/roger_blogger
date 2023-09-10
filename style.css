@@ -30,16 +30,16 @@ a {
 }
 .star {
 	position: absolute;
-	width: 28px;
-	height: 28px;
+	width: 40px;
+	height: 40px;
 
-	background-image: url(files_basic/star.ico);
+	background-image: url(files_basic/star.png);
 	background-size: cover;
 	user-select: none;
 }
 #star_point {
-	top: calc(50% - 14px);
-	left: calc(50% - 14px);
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
 	border-radius: 50%;
 	cursor: move;
 }
