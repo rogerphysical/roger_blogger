@@ -1,4 +1,4 @@
-var stars_id = 0;
+var stars_wait = false;
 var talk_id = 0;
 var talk_id2 = 0;
 
@@ -177,25 +177,45 @@ function ball_other3(th) {
 
 // 觀測星空
 function star_sky() {
-	if (stars_id === 0) {
+	if (stars_wait === false) {
 		star_shine();
-		stars_id = setInterval(()=> star_shine(), 10000);
+		one_talk("願為鳳凰!");
 		// console.log(stars_id);
 
-		one_talk("怎麼有東西若隱若現?!");
 	}
 	else {
-		clearInterval(stars_id);
-		stars_id = 0;
-
-		one_talk("平靜如故~~~~");
+		one_talk("急，則前功盡棄~~~~");
 	}
 }
 // 星光閃爍
 function star_shine() {
-	var stars = document.getElementById('stars');
-	stars.style.opacity = 0.4;
-	setTimeout(()=> stars.style.opacity = 1, 5000);
+	stars_wait = true;
+	const random_value = Math.random();
+
+	// 78
+	const s_top = 78;
+	// 50~100
+	const s_width = parseInt(50+random_value*50);
+	// -50~-25 + 33 -> -17~8
+	const s_left = parseInt(33-s_width/2);
+	// -90~0
+	const s_transform = parseInt(-60+random_value*40);
+
+	// offset
+	const random_value_2 = Math.random();
+	const pos_left = parseInt(10+random_value_2*30);
+	const pos_width = parseInt(100-pos_left);
+
+	let shooting_star = document.createElement("div");
+	shooting_star.className = 'shooting_star_control';
+	shooting_star.style = "left:" + s_left + "%;width:" + s_width + "%;transform:rotate(" + s_transform + "deg);";
+	shooting_star.innerHTML = "<div style=position:absolute;left:"+pos_left+"%;width:"+pos_width+"%><div class=shooting_star></div></div>";
+
+	let par_node = document.getElementById('stars');
+	par_node.appendChild(shooting_star);
+
+	setTimeout(()=> par_node.removeChild(shooting_star), 2000);
+	setTimeout(()=> stars_wait = false, 2400);
 }
 
 // 對話
