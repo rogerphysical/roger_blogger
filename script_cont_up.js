@@ -19,9 +19,7 @@ var up = '\
 			</div>\
 \
 			<div id="cont_top_pic">\
-				<a href="index0.html">\
-					<img id="cont_top_img" src="files_basic/animal.png">\
-				</a>\
+				<img id="cont_top_img" src="files_basic/animal.png">\
 			</div>\
 \
 			<div id="cont_main">\

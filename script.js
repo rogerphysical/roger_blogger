@@ -208,7 +208,7 @@ function star_shine() {
 
 	let shooting_star = document.createElement("div");
 	shooting_star.className = 'shooting_star_control';
-	shooting_star.style = "left:" + s_left + "%;width:" + s_width + "%;transform:rotate(" + s_transform + "deg);";
+	shooting_star.style = "left:calc(" + s_left + "% + 20px);top:calc(" + s_top + "% + 20px);width:" + s_width + "%;transform:rotate(" + s_transform + "deg);";
 	shooting_star.innerHTML = "<div style=position:absolute;left:"+pos_left+"%;width:"+pos_width+"%><div class=shooting_star></div></div>";
 
 	let par_node = document.getElementById('stars');

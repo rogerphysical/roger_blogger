@@ -107,7 +107,7 @@ a {
 }
 #cont_top_img {
 	width: 100%;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 #cont_main {
