@@ -275,12 +275,11 @@ function talking() {
 
 // 關鍵觸發
 function lab_change() {
-	document.getElementById('bird').src = "files_basic/bird2.png";
-	document.getElementById('bird_2').src = "files_basic/bird_f2.png";
-	document.getElementById('radies').src = "files_basic/radies2.png";
+	document.getElementById('bird').className = "bird_x";
+	document.getElementById('bird_2').className = "bird_2_x";
+	document.getElementById('radies').className = "radies_x";
 
-	document.getElementById('cont_top_img').src = "files_basic/lion.png";
-	document.getElementById('cont_top_pic').style.top = "-140px";
+	document.getElementById('cont_top_pic').className = "cont_top_pic_x";
 
 	document.getElementById('music').play();
 

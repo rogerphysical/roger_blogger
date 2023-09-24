@@ -10,7 +10,6 @@ var up = '\
 	<body onkeydown="key_point(event)">\
 		<div id="stars">\
 			<div id="star_space" class="star" style="left: 33%; top: 78%; background-image: unset;" ondragover="dragover(event)" ondrop="drop(event)"></div>\
-\
 		</div>\
 		\
 		<div id="cont">\
@@ -18,9 +17,7 @@ var up = '\
 				<audio id="music" controls loop src="files_basic/music.mp3"></audio>\
 			</div>\
 \
-			<div id="cont_top_pic">\
-				<img id="cont_top_img" src="files_basic/animal.png">\
-			</div>\
+			<div id="cont_top_pic" class="cont_top_pic"></div>\
 \
 			<div id="cont_main">\
 				<div class="cont_main_l">\

@@ -103,11 +103,19 @@ a {
 	width: 200px;
 	position: absolute;
 	left: calc(10vw + 30px);
-	top: -200px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
-#cont_top_img {
-	width: 100%;
-	/* cursor: pointer; */
+.cont_top_pic {
+	background-image: url(files_basic/animal.png);
+	top: -200px;
+	height: 200px;
+}
+.cont_top_pic_x {
+	background-image: url(files_basic/lion.png);
+	top: -140px;
+	height: 160px;
 }
 
 #cont_main {
@@ -204,9 +212,18 @@ a {
 	top: 0%;
 	left: 0px;
 }
-#running img {
+#radies {
 	width: 100%;
 	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.radies {
+	background-image: url(files_basic/radies.png);
+}
+.radies_x {
+	background-image: url(files_basic/radies2.png);
 }
 .running {
 	animation: running_thing 10s infinite;
@@ -347,8 +364,23 @@ a {
 	display: none;
 }
 #bird, #bird_2 {
-	max-width: 100%;
-	max-height: 100%;
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bird {
+	background-image: url(files_basic/bird.png);
+}
+.bird_x {
+	background-image: url(files_basic/bird2.png);
+}
+.bird_2 {
+	background-image: url(files_basic/bird_f.png);
+}
+.bird_2_x {
+	background-image: url(files_basic/bird_f2.png);
 }
 
 @media(max-width: 1024px) {
@@ -367,7 +399,6 @@ a {
 	#tool {display: none;}
 
 	#cont_main {border-radius: 0px;}
-	
 
 }
 @media(max-width: 768px) {

@@ -9,7 +9,7 @@ var down = '\
 		</div>\
 \
 		<div id="running" class="running">\
-			<img id="radies" src="files_basic/radies.png">\
+			<div id="radies" class="radies"></div>\
 			<div id="star_point" class="star" draggable="true" ondragstart="dragstart(event)"></div>\
 		</div>\
 \
@@ -30,10 +30,10 @@ var down = '\
 			</div>\
 \
 			<div id="tool12_2">\
-				<img id="bird_2" src="files_basic/bird_f.png">\
+				<div id="bird_2" class="bird_2"></div>\
 			</div>\
 			<div id="tool12" onmouseenter="show_tools()">\
-				<img id="bird" src="files_basic/bird.png">\
+				<div id="bird" class="bird"></div>\
 			</div>\
 \
 		</div>\
