@@ -18,10 +18,6 @@ function co_start(th) {
 	prepare();
 	co_start_end(th);
 
-	// th.setAttribute("onclick", "co_start_end('th')");
-	// th.innerHTML = 'focus';
-    // th.style.width = 'calc(20% - 4px)'
-
 	document.getElementById('co_tool').innerHTML = '\
     <div id="co_focus" class="co_b c_i_link" onclick="co_start_end()">focus</div>\
     <div class="co_t">width:&nbsp;</div>\
@@ -80,7 +76,7 @@ var co_paper_left = 0;
 var co_paper_top = 0;
 function prepare(){
 	co_write.addEventListener('touchstart', function (e) {
-		// e.preventDefault();
+		e.preventDefault();
 		//觸控資訊
 		co_paper_rect = co_paper.getBoundingClientRect();
 		co_paper_left = co_paper_rect.x;
@@ -88,7 +84,7 @@ function prepare(){
 		change_color_d(e.changedTouches[0].clientX-co_paper_left, e.changedTouches[0].clientY-co_paper_top);
 	})
 	co_write.addEventListener('touchend', function (e) {
-		// e.preventDefault();
+		e.preventDefault();
 		change_color_u();
 	})
 	co_write.addEventListener('touchmove', function (e) {
