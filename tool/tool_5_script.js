@@ -19,12 +19,12 @@ function co_start(th) {
 	co_start_end(th);
 
 	document.getElementById('co_tool').innerHTML = '\
-    <div id="co_focus" class="co_b c_i_link" onclick="co_start_end()">focus</div>\
-    <div class="co_t">width:&nbsp;</div>\
-    <input id="co_stroke_width" class="co_t co_arrow_hiden" type="number" placeholder="width" onfocus="this.select()" value="10" onKeyUp="if(this.value > 400){this.value=400;}else if(this.value < 0){this.value=0;}">\
-    <div class="co_t">color:&nbsp;</div>\
-    <input id="co_stroke_color" class="co_t" type="color" value="#000000">\
-    <div id="co_reset" class="co_b c_i_link" onclick="co_reset()">reset</div>';
+	<div id="co_focus" class="co_b c_i_link" onclick="co_start_end()">focus</div>\
+	<div class="co_t">width:&nbsp;</div>\
+	<input id="co_stroke_width" class="co_t co_arrow_hiden" type="number" placeholder="width" onfocus="this.select()" value="10" onKeyUp="if(this.value > 400){this.value=400;}else if(this.value < 0){this.value=0;}">\
+	<div class="co_t">color:&nbsp;</div>\
+	<input id="co_stroke_color" class="co_t" type="color" value="#000000">\
+	<div id="co_reset" class="co_b c_i_link" onclick="co_reset()">reset</div>';
 }
 function co_start_end() {
 	var target = $("#co_tool").offset().top;
@@ -37,8 +37,8 @@ function co_reset() {
 	co_write.width = co_paper.offsetWidth;
 	co_write.height = co_paper.offsetHeight;
 
-    tool.lineCap = 'round';
-    tool.lineJoin = 'round';
+	tool.lineCap = 'round';
+	tool.lineJoin = 'round';
 
 	co_record.innerHTML = '0';
 }
@@ -49,11 +49,11 @@ var write_down = 0;
 // action function
 function change_color_d(x, y) {
 	write_down = 1;
-    tool.beginPath();
+	tool.beginPath();
 	tool.lineWidth = document.getElementById('co_stroke_width').value;
-    tool.strokeStyle = document.getElementById('co_stroke_color').value;
+	tool.strokeStyle = document.getElementById('co_stroke_color').value;
 	tool.moveTo(x, y-1);// touch board can`t lineTo the same point
-    
+	
 	change_color_m(x, y);// first point
 }
 function change_color_u() {
