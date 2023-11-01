@@ -52,11 +52,9 @@ function change_color_d(x, y) {
     tool.beginPath();
 	tool.lineWidth = document.getElementById('co_stroke_width').value;
     tool.strokeStyle = document.getElementById('co_stroke_color').value;
-	tool.moveTo(x, y);
+	tool.moveTo(x, y-1);// touch board can`t lineTo the same point
     
-	tool.lineTo(x, y+1);// touch board can`t lineTo the same point
-	tool.stroke();// 繪製
-	// console.log(x, y);
+	change_color_m(x, y);// first point
 }
 function change_color_u() {
 	write_down = 0;
