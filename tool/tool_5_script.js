@@ -31,7 +31,7 @@ function co_start_end() {
 	$('html, body').animate({scrollTop: target}, 200);
 }
 
-//reset
+// reset
 function co_reset() {
 	// tool.fillRect(0, 0, co_paper.offsetWidth, co_paper.offsetHeight);
 	co_write.width = co_paper.offsetWidth;
@@ -43,10 +43,10 @@ function co_reset() {
 	co_record.innerHTML = '0';
 }
 
-//判斷是否下筆
+// 判斷是否下筆
 var write_down = 0;
 
-//滑鼠
+// action function
 function change_color_d(x, y) {
 	write_down = 1;
     tool.beginPath();
@@ -54,8 +54,8 @@ function change_color_d(x, y) {
     tool.strokeStyle = document.getElementById('co_stroke_color').value;
 	tool.moveTo(x, y);
     
-	tool.lineTo(x, y+1);
-	tool.stroke();//繪製
+	tool.lineTo(x, y+1);// touch board can`t lineTo the same point
+	tool.stroke();// 繪製
 	// console.log(x, y);
 }
 function change_color_u() {
@@ -65,16 +65,35 @@ function change_color_u() {
 function change_color_m(x, y) {
 	if (write_down) {
 		tool.lineTo(x, y);
-		tool.stroke();//繪製
+		tool.stroke();// 繪製
 		// console.log(x, y);
 	}
 }
 
-//觸控
+// action
 var co_paper_rect = 0;
 var co_paper_left = 0;
 var co_paper_top = 0;
 function prepare(){
+	// mouse
+	co_write.addEventListener('mousedown', function (e) {
+		// console.log(e.which);
+		if (e.which == 1){
+			change_color_d(e.offsetX, e.offsetY);	
+		}
+	})
+	co_write.addEventListener('mouseup', function (e) {
+		if (e.which == 1){
+			change_color_u(e.offsetX, e.offsetY);	
+		}
+	})
+	co_write.addEventListener('mousemove', function (e) {
+		if (e.which == 1){
+			change_color_m(e.offsetX, e.offsetY);	
+		}
+	})
+
+	// touch board
 	co_write.addEventListener('touchstart', function (e) {
 		e.preventDefault();
 		//觸控資訊
