@@ -38,7 +38,7 @@ function co_reset() {
 	co_write.height = co_paper.offsetHeight;
 
     tool.lineCap = 'round';
-    tool.lineJoin = "round";;
+    tool.lineJoin = 'round';
 
 	co_record.innerHTML = '0';
 }
@@ -54,7 +54,7 @@ function change_color_d(x, y) {
     tool.strokeStyle = document.getElementById('co_stroke_color').value;
 	tool.moveTo(x, y);
     
-	tool.lineTo(x, y);
+	tool.lineTo(x, y+1);
 	tool.stroke();//繪製
 	// console.log(x, y);
 }
