@@ -25,6 +25,9 @@
 	box-shadow: 2px 2px 2px 1px;
 	background-color: #FE7;
 }
+.c_i_arrow::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
 .c_i_tital {
 	padding: 4px;
 	text-align: center;

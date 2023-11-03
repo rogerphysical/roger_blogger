@@ -21,11 +21,6 @@
 	justify-content: center;
 	-webkit-justify-content: center;
 }
-
-.co_arrow_hiden::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-}
-
 .co_b {
 	float: left;
 	width: calc(20% - 4px);

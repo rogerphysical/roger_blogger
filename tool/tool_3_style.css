@@ -50,9 +50,6 @@
 	padding: 6px;
 	text-align: center;
 }
-.co_arrow_hiden::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-}
 #co_i_t3 {
 	float: left;
 	width: 60px;

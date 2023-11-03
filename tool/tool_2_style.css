@@ -18,9 +18,6 @@
 	cursor: pointer;
 	background-color: #88F;
 }
-.co_arrow_hiden::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-}
 .co_ran {
 	padding: 10px;
 	background-color: #FDFDFD;
