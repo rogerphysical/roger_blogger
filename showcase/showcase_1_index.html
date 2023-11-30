@@ -1,19 +1,285 @@
 <html lang="zh-TW">
 	<head>
-		
+		<!-- <script type="text/x-mathjax-config"> -->
+		<!-- MathJax.Hub.Config({ -->
+		<!--   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} -->
+		<!-- }); -->
+		<!-- </script> -->
+        <!--  -->
+		<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>	 -->
 	<script type="text/javascript" src="../inner_script_cont_up.js"></script>
 	
 	<div id="c_title">Showcase</div>
 
 	<div class="c_item">
 		<div class="c_i_tital">Latex</div>
-		<div class="c_i_img">
-			<img src="../files_basic/pic_no.jpg">
-		</div>
-		<div class="c_i_parag">doing4......</div>
+		<!-- <div class="c_i_img"> -->
+		<!-- 	<img src="../files_basic/pic_no.jpg"> -->
+		<!-- </div> -->
+		<div class="c_i_parag">Compiler: pdfLaTeX</div>
+
+		<div class="c_i_side">artical.tex</div>
+		<pre class="c_i_parag">
+
+%種類_書面
+\documentclass[10pt]{article}
+%種類_簡報
+%\documentclass{beamer}
+
+%中文
+\usepackage{CJKutf8}
+
+%版面
+\usepackage[letterpaper,margin=2cm]{geometry}
+%\usepackage[a4paper]{geometry}
+
+%常用符號與圖片
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+
+%底線加強
+\usepackage{ulem}
+%向量加粗
+\usepackage{bm}
+%表格列合併
+%\usepackage{multirow}
+%客製化項目
+\usepackage{enumitem}
+%自動排列次數theorem lemma proof
+\usepackage{amsthm}
+\newtheorem{thm}{Theorem}
+\newtheorem*{lem}{Lemma}
+
+
+%內容版面
+%段落空格
+%\setlength{\parindent}{1cm}
+%首段空格(預設首段無空格)
+\usepackage{indentfirst}
+
+%自訂指令
+\newcommand{\roger}{Roger}
+
+%連結
+\usepackage{hyperref}
+
+\title{learn}
+\author{Roger}
+\date{October 2021}
+
+%文件開始
+\begin{document}
+%編輯中文
+\begin{CJK*}{UTF8}{bsmi}
+
+%標題 作者 日期
+\maketitle
+%目錄
+\tableofcontents
+
+%跳至下一頁
+\newpage
+
+\section{架構}
+
+\subsection{架構}
+\subsubsection{架構}
+\cite{what_is_this}
+
+\section{樣式}
+
+一段文字some text \roger
+
+\textbf{一段文字some text}
+
+\textit{一段文字some text}
+
+\underline{一段文字some text}
+
+\uline{一段文字some text}
+
+\uuline{一段文字some text}
+
+\uwave{一段文字some text}
+
+\section{位置}
+
+一段文字some text \hspace{2cm} 一段文字some text
+\vspace{2cm}
+
+\begin{center}
+    一段文字some text
+\end{center}
+
+\begin{flushleft}
+    一段文字some text
+\end{flushleft}
+
+\begin{flushright}
+    一段文字some text
+\end{flushright}
+
+\section{數學--外}
+
+一串數學\fbox{公式}:$\boxed{f(x)} = x+2$
+$$
+f(x) = x+2
+$$
+
+%無編號
+\begin{align*}
+    f(x) &= x+2 &=x+0+2\\
+    &= x+1+1 &=x+2+0
+\end{align*}
+%有編號
+\begin{align}
+    f(x) &= x+2\\
+    &= x+1+1 \nonumber \\
+    &= x+3-1
+\end{align}
+
+\section{數學--內}
+
+$1+1-1 \times 1 \cdot 1 \div 1$
+
+$a^b_c : a^{b_c} : {a^b}_c$
+
+$\displaystyle \sum_{q=0}^Q 1+q \text{ where $q$ is what } \prod_{q=0}^Q$
+
+$\displaystyle \lim_{x \to \infty} \left( \frac{1}{x} \right)$
+
+$\displaystyle \int_0^\infty x \, \mathrm{d}x = \int \limits_0^\infty x \, \mathrm{d}x \, : \, \iint \quad : \quad F(x) \bigg \vert_a^b$
+
+$\displaystyle f'(x) = \dot{f}(x) : f''(x) = \ddot{f}(x) : \frac{\partial f}{\partial x}$
+
+$\Vec{r}(t) = \bm{r}(t) = \langle x, y \rangle$
+
+$\displaystyle \nabla : \oint : \pm \sqrt[4]{x}$
+
+$\{ x+1 \mid x \in B \} : \subset \subseteq \supset \supseteq : \cup \cap \bigcup \bigcap : \setminus : \land \lor \lnot$
+
+$\because A \therefore B : \forall A \exists B : \implies \impliedby \iff$
+
+$\cdots \ldots \vdots$
+
+$\geq \leq : \neq \ngtr \nless : \ngeq \nleq : \approx \sim \equiv$
+
+$A \overset{?}{ \underset{!}{=} } B$
+
+%d開頭:display style
+%t開頭:inline
+一段文字some text一段文字some text一段文字some text一段文字some text一段文字some text一段文字some text$\dfrac{1}{1}$一段文字some text一段文字some text一段文字some text一段文字some text一段文字some text一段文字some text
+
+一段文字some text一段文字some text一段文字some text一段文字some text一段文字some text一段文字some text$\tfrac{1}{1}$一段文字some text一段文字some text一段文字some text一段文字some text一段文字some text一段文字some text
+
+\section{特殊字母}
+
+$\alpha \beta \gamma \delta \epsilon \zeta \eta \theta$
+
+$\iota \kappa \lambda \mu \nu \xi o \pi$
+
+$\rho \sigma \tau \upsilon \phi \chi \psi \omega$
+
+$\mathbb{NZQRC}$
+
+\section{表格矩陣}
+
+$$
+\begin{array}{|l||cr|}
+    \hline
+    a_{11} & a_{12} & a_{13}\\
+    \hline \hline
+    a_{21} & \multicolumn{2}{c|}{text}
+\end{array}
+$$
+
+$
+\begin{pmatrix}
+    a_{11} & a_{12} & \cdots \\
+    a_{21} & a_{22} & \cdots \\
+    \vdots & \vdots & \ddots
+\end{pmatrix}
+=
+\begin{bmatrix}
+    a_{11} & a_{12} & \cdots \\
+    a_{21} & a_{22} & \cdots \\
+    \vdots & \vdots & \ddots
+\end{bmatrix}
+$
+
+\begin{itemize}
+    \item A
+    \item B
+    \begin{itemize}
+        \item A
+        \item[$\longrightarrow$] B
+    \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+    \item A
+    \item B
+    \begin{enumerate}[label=\Roman*]
+        \item A
+        \item B
+    \end{enumerate}
+\end{enumerate}
+
+%usepackage{amsthm}
+\begin{thm}
+    what
+\end{thm}
+
+\begin{thm}
+    to be
+\end{thm}
+
+\begin{lem}
+    what
+\end{lem}
+
+\begin{lem}
+    to be
+\end{lem}
+
+\begin{proof}
+    or not
+\end{proof}
+
+\section{圖片}
+這裡附一張圖片 \ref{fig:radius}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.4 \textwidth]{un_radius_1.png}
+\caption{\label{fig:radius}image in \cite{my_web}.}
+\end{figure}
+
+
+\bibliographystyle{plain}
+\bibliography{bib_name}
+
+\end{CJK*}
+\end{document}
+		</pre>
+
+		<div class="c_i_side">bib_name.bib</div>
+		<pre class="c_i_parag">
+
+@article{what_is_this,
+    author={author},
+    title={title},
+    journal={journal},
+    year={year},
+}
+@misc{my_web,
+  author={Roger},
+  title={Roger Blog},
+  year = {2020},
+  howpublished="\url{https://rogerphysical.github.io/roger_blogger/index.html}",
+}
+		</pre>
 	</div>
-
-
 	<script type="text/javascript" src="../inner_script_cont_down.js"></script>
 </html>
 
