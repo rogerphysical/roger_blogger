@@ -7,16 +7,6 @@ window.onload = function() {
 	// star_sky();
 	// document.getElementById('cont_main_l_items').style.display = $(window).width() > 1024?"block":"none";
 	
-	// input add num
-	// var c_i_arrow = document.getElementsByClassName('c_i_arrow');
-	// Array.from(c_i_arrow).forEach((element) => {
-	// 	// console.log(1);
-	// 	element.addEventListener('mousemove', function (e) {
-	// 		if (e.buttons == 1) {
-	// 			console.log(1);
-	// 		}
-	// 	});
-	// });
 }
 // 測試效率
 // console.time("test");

@@ -1,26 +1,36 @@
 <html lang="zh-TW">
 	<head>
-		<!-- <script type="text/x-mathjax-config"> -->
-		<!-- MathJax.Hub.Config({ -->
-		<!--   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} -->
-		<!-- }); -->
-		<!-- </script> -->
-        <!--  -->
-		<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>	 -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 	<script type="text/javascript" src="../inner_script_cont_up.js"></script>
 	
-	<div id="c_title">Showcase</div>
+	<div id="c_title" class="c_i_link" onclick="location.href = '../index2.html'">展示櫥窗&crarr;</div>
 
 	<div class="c_item">
-		<div class="c_i_tital">Latex</div>
+		<div class="c_i_tital">
+			<div>LaTeX</div>
+			<div class="c_i_date">2023/12/01</div>
+		</div>
 		<!-- <div class="c_i_img"> -->
 		<!-- 	<img src="../files_basic/pic_no.jpg"> -->
 		<!-- </div> -->
-		<div class="c_i_parag">Compiler: pdfLaTeX</div>
+
+		<div class="c_i_side">Compiler: pdfLaTeX</div>
+
+		<div class="c_i_side">Sample</div>
+		<pre class="c_i_parag" style="text-indent: 0px; padding-left: 44px; white-space: pre-wrap;">
+$\displaystyle \Gamma(z) = \int_0^\infty t^{z-1}e^{-t} \, \mathrm{d}t \quad , Re(z)>0$
+
+		&darr;&darr;
+		&darr;&darr;</pre>
+		<div class="c_i_parag">
+			$\displaystyle \Gamma(z) = \int_0^\infty t^{z-1}e^{-t} \, \mathrm{d}t \quad , Re(z)>0$
+		</div>
 
 		<div class="c_i_side">artical.tex</div>
-		<pre class="c_i_parag">
-
+		<pre class="c_i_parag" style="text-indent: 0px; padding-left: 44px; white-space: pre-wrap;">
 %種類_書面
 \documentclass[10pt]{article}
 %種類_簡報
@@ -264,8 +274,7 @@ $
 		</pre>
 
 		<div class="c_i_side">bib_name.bib</div>
-		<pre class="c_i_parag">
-
+		<pre class="c_i_parag" style="text-indent: 0px; padding-left: 44px; white-space: pre-wrap;">
 @article{what_is_this,
     author={author},
     title={title},
