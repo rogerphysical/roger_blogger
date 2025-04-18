@@ -14,6 +14,7 @@ function write_cont_1(running, ball_other) {
 			<div id="star_point" class="star" draggable="true" ondragstart="dragstart(event)"></div>
 		</div>
 
+		<div id="tool_to_where_for_small_screen" onclick="to_where()">&vArr;</div>
 		<div id="tool">
 			<div id="tool2"></div>
 			<div id="tool11" onmouseleave="close_tools()">

@@ -305,7 +305,6 @@ a {
 	overflow: hidden;
 	user-select: none;
 	z-index: 2;
-	transition: bottom 2.8s,  right 2.8s;
 }
 
 #tool2 {
@@ -394,8 +393,25 @@ a {
 	background-image: url(files_basic/bird_f2.png);
 }
 
+#tool_to_where_for_small_screen {
+	width: 40px;
+	position: fixed;
+	right: 20px;
+	bottom: 50px;
+
+	border: 2px solid #000;
+	border-radius: 10px;
+
+
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	
+	background: #eee;
+	display: none;
+}
+
 @media(max-width: 1024px) {
-	body {background-image: unset;}
 	#stars {display: none;}
 	#cont {
 		width: 100%;
@@ -404,10 +420,10 @@ a {
 	}
 
 	#music_cont {display: none;}
-	#cont_top_pic {display: none;}
 
 	#running {display: none;}
 	#tool {display: none;}
+	#tool_to_where_for_small_screen {display: block;}
 
 	#cont_main {border-radius: 0px;}
 
@@ -429,3 +445,5 @@ a {
 		/*border-top: 1px solid #404;*/
 	}
 }
+
+

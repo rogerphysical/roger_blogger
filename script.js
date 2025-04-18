@@ -135,21 +135,20 @@ function close_tools() {
 // 前往彼端
 function to_where() {
 	const pos = $(window).scrollTop();
+	// console.log(pos);
+	// console.log($(window).height());
 
+	// 如果往下滑超過一頁-160
 	if ($(window).height()-160 < pos) {
 		// 更改圖片位置
-		const width = ($(window).width()-400-200)/2;
-		var pic_pos = document.getElementById('cont_top_pic').style.left;
-		pic_pos = parseInt(pic_pos.substring(0, pic_pos.length-2));
+		const width = (cont_top_pic.offsetParent.offsetWidth-200)/2;
 
-		if (pic_pos > width) {
-			var left = parseInt(Math.random()*width);
-		}
-		else {
-			var left = width+parseInt(Math.random()*width);
+		var left = parseInt(Math.random()*width);
+		if (cont_top_pic.offsetLeft < width) {
+			left += width;
 		}
 		
-		document.getElementById('cont_top_pic').style.left = left+"px";
+		cont_top_pic.style.left = left+"px";
 
 		// 移至最上
 		$('html, body').animate({scrollTop: 0}, 200);
@@ -357,3 +356,5 @@ function lock_bg_move (mode) {
 		$('#stars').animate({backgroundSize: '120%'}, 400);
 	}
 }
+
+

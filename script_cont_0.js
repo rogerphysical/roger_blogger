@@ -1,7 +1,6 @@
 function write_cont_0(path_relation) {
 	document.write(`
 		<title>Roger的實驗洪流</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<link rel="icon" type="image/x-icon" href="` + path_relation + `files_basic/magic_square_1.ico">
